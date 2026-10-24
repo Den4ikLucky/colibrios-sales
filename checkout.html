@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050508">
+<title>ColibriOS · Оплата</title>
+<link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="assets/styles.css">
+<script defer src="assets/config.js"></script><script defer src="assets/checkout.js"></script>
+<style>.checkout{max-width:640px;margin:64px auto;padding:24px}.checkout h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1}.checkout select,.checkout input{width:100%;min-width:0}.checkout p{max-width:65ch}.checkout nav{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.checkout .price{color:#F59E0B;font-variant-numeric:tabular-nums;font-size:2rem}.checkout [role=status]{margin:24px 0;line-height:1.6}.checkout label{display:block;margin:20px 0 8px}.checkout button{margin-top:24px}#consent-label{display:flex;gap:12px}#consent{width:20px;flex:0 0 20px}body{overflow-wrap:anywhere}</style>
+</head>
+<body>
+<main class="checkout" id="main">
+<a href="index.html">ColibriOS · Все форматы</a>
+<h1 id="product-title">ИИ-Концентрат на 3 вечера</h1>
+<p class="price" id="product-price">990 ₽</p>
+<p id="product-description">Практический вход в ColibriOS. Состав и правила доступа указаны в оферте.</p>
+<p role="status" id="checkout-status">Проверяем доступность оплаты…</p>
+<form id="checkout-form" hidden>
+<label for="email">Email для чека и доступа</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+<label for="currency">Валюта счёта</label><select id="currency" name="currency"><option value="RUB">RUB · российские рубли</option><option value="USD">USD · доллары США</option><option value="EUR">EUR · евро</option></select>
+<label for="method">Способ оплаты</label><select id="method" name="method"><option value="SBP">СБП · QR на странице Lava.top</option><option value="CARD">Банковская карта</option></select>
+<label id="consent-label"><input type="checkbox" id="consent" required><span>Принимаю <a id="terms-link" href="terms.html">оферту</a> и условия <a id="privacy-link" href="privacy.html">обработки данных заказа</a>.</span></label>
+<button type="submit" class="btn full" id="pay-button">Открыть защищённую оплату Lava.top</button>
+</form>
+<p class="muted">Данные карты вводятся только на странице платёжного сервиса. Возврат на сайт сам по себе не подтверждает оплату.</p>
+<a id="support-link" hidden>Связаться с поддержкой</a>
+<nav aria-label="Документы"><a href="terms.html">Оферта</a><a href="privacy.html">Конфиденциальность</a><a href="tma_magnet/">Бесплатная диагностика</a></nav>
+<noscript><p>Для открытия платёжного счёта включите JavaScript. Тарифы и оферта доступны по ссылкам выше.</p></noscript>
+</main>
+</body></html>
