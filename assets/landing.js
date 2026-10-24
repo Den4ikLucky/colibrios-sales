@@ -40,7 +40,7 @@
     modeValues[mode] = { employees: Number($('employees').value), hours: Number($('hours').value) }; mode = button.dataset.mode;
     $('calc-mode').querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b === button)));
     $('employees').closest('.field').hidden = mode === 'creator'; $('hours').max = mode === 'b2b' ? '8' : '60'; $('hours').step = mode === 'b2b' ? '0.25' : '1'; $('employees').value = modeValues[mode].employees; $('hours').value = modeValues[mode].hours;
-    $('hours-label').textContent = mode === 'b2b' ? 'Рутина каждого, часов в день' : 'Ваша рутина, часов в неделю'; $('mode-hint').textContent = mode === 'b2b' ? 'Модель Попова: люди × часы в день × стоимость часа × 22 рабочих дня' : 'Модель автора: часы в неделю × стоимость часа × 4,3 недели в месяце. Не суммируйте уже учтённые часы'; C.haptic(); calculate();
+    $('hours-label').textContent = mode === 'b2b' ? 'Рутина каждого, часов в день' : 'Ваша рутина, часов в неделю'; $('mode-hint').textContent = mode === 'b2b' ? 'Для команды: люди × часы в день × стоимость часа × 22 рабочих дня' : 'Для автора: часы в неделю × стоимость часа × 4,3 недели в месяце. Не суммируйте уже учтённые часы'; C.haptic(); calculate();
   })); calculate();
 
   // The same persisted deadline is used on every visit. The server owns actual eligibility.
