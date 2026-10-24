@@ -18,14 +18,29 @@
   if (config.supportUrl && /^https:\/\//.test(config.supportUrl)) { support.href = config.supportUrl; support.hidden = false; }
   else if (config.supportEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.supportEmail)) { support.href = 'mailto:' + config.supportEmail; support.hidden = false; }
   let base;
-  try { base = new URL(config.checkoutApiBase); if (base.protocol !== 'https:') base = null; } catch { base = null; }
-  if (!base || config.commercialReady !== true) {
+  try { base = config.checkoutApiBase ? new URL(config.checkoutApiBase) : null; if (base && base.protocol !== 'https:') base = null; } catch { base = null; }
+  let hostedUrl = null;
+  try {
+    const rawHosted = config.hostedPaymentUrls?.[key];
+    if (rawHosted) {
+      const parsedHosted = new URL(rawHosted);
+      if (parsedHosted.protocol === 'https:' && (parsedHosted.hostname === 'lava.top' || parsedHosted.hostname.endsWith('.lava.top'))) {
+        hostedUrl = parsedHosted.href;
+      }
+    }
+  } catch { hostedUrl = null; }
+  if ((!base && !hostedUrl) || config.commercialReady !== true) {
     status.textContent = 'Оплата пока недоступна. Подключаем платёжный сервис и выдачу доступа. Списание денег на этой странице невозможно.';
     return;
   }
   document.getElementById('terms-link').href = config.termsUrl;
   document.getElementById('privacy-link').href = config.privacyUrl;
-  status.textContent = 'Проверьте формат. СБП QR или оплата картой откроются на странице Lava.top.';
+  const emailInput = document.getElementById('email');
+  if (!base && hostedUrl && emailInput) {
+    emailInput.required = false;
+    emailInput.placeholder = 'Укажете на защищённой странице Lava.top (или здесь для памятки)';
+  }
+  status.textContent = 'Проверьте выбранный тариф и подтвердите согласие с офертой. СБП (QR-код) или оплата картой откроются на защищённой странице Lava.top.';
   form.hidden = false;
   const currency = document.getElementById('currency');
   const method = document.getElementById('method');
@@ -34,7 +49,12 @@
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
-    const payload = { product: key, email: document.getElementById('email').value.trim(), currency: currency.value, paymentMethod: method.value };
+    if (!base && hostedUrl) {
+      status.textContent = 'Переходим на защищённую страницу оплаты Lava.top (СБП QR / карта)…';
+      location.assign(hostedUrl);
+      return;
+    }
+    const payload = { product: key, email: emailInput.value.trim(), currency: currency.value, paymentMethod: method.value };
     const initData = window.Telegram?.WebApp?.initData;
     if (initData) payload.initData = initData;
     const fingerprint = JSON.stringify(payload);
@@ -58,6 +78,10 @@
       if (payment.protocol !== 'https:' || !(payment.hostname === 'lava.top' || payment.hostname.endsWith('.lava.top'))) throw new Error('invalid_payment_url');
       location.assign(payment.href);
     } catch {
+      if (hostedUrl) {
+        location.assign(hostedUrl);
+        return;
+      }
       status.textContent = 'Создание счёта не подтверждено. Повтор использует тот же номер запроса. Если платёж уже выполнен, не оплачивайте снова: обратитесь в поддержку.';
       button.disabled = false;
     }
