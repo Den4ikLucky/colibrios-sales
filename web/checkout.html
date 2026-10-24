@@ -6,6 +6,14 @@
 <link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/styles.css">
 <script defer src="../assets/config.js"></script><script defer src="../assets/checkout.js"></script>
 <style>.checkout{max-width:640px;margin:64px auto;padding:24px}.checkout h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1}.checkout select,.checkout input{width:100%;min-width:0}.checkout p{max-width:65ch}.checkout nav{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.checkout .price{color:#F59E0B;font-variant-numeric:tabular-nums;font-size:2rem}.checkout [role=status]{margin:24px 0;line-height:1.6}.checkout label{display:block;margin:20px 0 8px}.checkout button{margin-top:24px}#consent-label{display:flex;gap:12px}#consent{width:20px;flex:0 0 20px}body{overflow-wrap:anywhere}</style>
+<!-- LIVING_WEB_V3_STACK_START -->
+<link rel="preload" href="../assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/sl-ui/colibrios-adapter.css">
+<script type="module" src="../assets/engines/sovereign-web.js"></script>
+<script type="module">import { installNavIndicator } from '../assets/engines/nav-indicator.js'; window.installNavIndicator = installNavIndicator;</script>
+<!-- Agentation endpoint="http://localhost:4747" is guarded inside sovereign-web.js; portable previews disable it. -->
+<!-- LIVING_WEB_V3_STACK_END -->
+<link rel="preload" href="../assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
 <main class="checkout" id="main">
