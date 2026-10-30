@@ -70,7 +70,9 @@
     $('scan-arithmetic').textContent = 'Расчёт: ' + (b2b ? C.number(employees) + ' × ' : '') + C.number(hours) + ' × ' + C.number(rate) + ' × ' + C.number(days) + ' = ' + C.money(model.routineCost) + '/мес. Потенциал: ' + C.money(model.routineCost) + ' × ' + C.number(recovery) + '% − ' + C.money(operating) + ' = ' + C.money(model.net) + '/мес. Окупаемость выбранного варианта: ' + C.money(investment) + ' / положительный потенциал. Время внедрения и налоги не включены.';
     $('scan-route-title').textContent = route === 'b2b' ? 'Ваш маршрут: диагностика B2B-процесса' : 'Ваш маршрут: начать с Концентрата';
     $('scan-route-reason').textContent = route === 'b2b' ? 'Есть команда, существующая задача и ответственный, а стоимость занятых часов превышает порог. Обсудите с Денисом и Татьяной объём внедрения за 450 000 ₽. Заявка на разговор не равна покупке.' : 'Сначала проверьте один сценарий на практике за 990 ₽. Для внедрения под ключ нужны процесс, владелец и подтверждённая экономика. Расчёт не обещает окупаемость обучения.';
-    $('scan-route-link').textContent = route === 'b2b' ? 'Обсудить внедрение · 450 000 ₽ ↗' : 'Концентрат на 3 вечера · 990 ₽ ↗'; $('scan-route-link').href = route === 'b2b' ? '../web/index.html?from=scan&route=b2b#b2b' : '../web/index.html?from=scan&plan=vip#vip';
+    $('scan-route-link').textContent = route === 'b2b' ? 'Обсудить внедрение · 450 000 ₽ ↗' : 'Концентрат на 3 вечера · 990 ₽ ↗'; $('scan-route-link').href = route === 'b2b'
+      ? new URL('?from=scan&route=b2b#b2b', window.COLIBRI_CONFIG?.storefrontUrl || new URL('../web/index.html', location.href)).href
+      : window.COLIBRI_CONFIG?.paymentUrls?.vip || '../web/checkout.html?product=vip';
     $('wizard').hidden = true; $('scan-result').hidden = false; $('scan-result').focus({ preventScroll: true }); $('scan-result').scrollIntoView({ block: 'start', behavior: 'instant' }); updateTelegramSend();
   }
   $('scan-export').addEventListener('click', () => { if (result) C.download('ColibriOS-ROI-diagnostic.json', JSON.stringify({ ...result, exportedAt: new Date().toISOString(), status: 'local_not_sent' }, null, 2), 'application/json'); });

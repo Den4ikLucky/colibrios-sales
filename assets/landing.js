@@ -8,6 +8,18 @@
   $('primary-nav').querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.setAttribute('aria-expanded', 'false'); menu.setAttribute('aria-label', 'Открыть меню'); $('primary-nav').classList.remove('open'); }));
   document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') { menu.click(); menu.focus(); } });
   C.bindTabs($('program-tabs'));
+  const selectFaq = C.bindTabs($('faq-tabs'));
+  selectFaq($('faq-tab-1'));
+  function openLinkedDetails(hash) {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(hash.slice(1))); } catch { return; }
+    for (let node = target; node; node = node.parentElement) {
+      if (node.tagName === 'DETAILS') node.open = true;
+    }
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(link => link.addEventListener('click', () => openLinkedDetails(link.hash)));
+  window.addEventListener('hashchange', () => openLinkedDetails(location.hash));
+  openLinkedDetails(location.hash);
   let agentTimer;
   $('run-agents').addEventListener('click', () => {
     clearInterval(agentTimer); const agents = [...$('agent-grid').children]; let index = 0;
@@ -67,7 +79,7 @@
   window.addEventListener('pagehide', () => C.store.set(timerKey, offer));
 
   const tiers = {
-    vip: { name: 'ИИ-Концентрат', price: 990, description: 'Программа трёх вечеров, стартовые скиллы и задания. Даты и доступы подтверждаются продавцом до оплаты.' },
+    vip: { name: 'ИИ-Концентрат', price: 990, description: 'Самостоятельный цифровой практикум на 3 вечера: пошаговые видеомодули в записи, готовые ИИ-шаблоны и ИИ-диагностика. Проходите в своём темпе без расписания. Мастер-группа оплачивается отдельно.' },
     light: { name: 'Light Tier', price: 79990, description: 'Команда ролей, база проекта и контентный процесс. Условия 48-часового апгрейда до Pro нужно подтвердить отдельно до платежа.' },
     pro: { name: 'Pro Tier', price: 119990, description: 'Light плюс TMA, воронки, контент-завод пяти форматов и контроль качества. Комплектация и сроки фиксируются в оферте.' },
     swarm: { name: 'Sovereign Swarm', price: 199990, description: 'Pro плюс архитектурный разбор с Татьяной и Денисом и план суверенного контура. Объём работ и инфраструктурные расходы согласуются отдельно.' }

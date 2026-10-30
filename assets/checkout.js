@@ -2,7 +2,7 @@
 (() => {
   const config = window.COLIBRI_CONFIG || {};
   const products = {
-    vip: ['ИИ-Концентрат на 3 вечера', 990],
+    vip: ['ИИ-Концентрат на 3 вечера', 990, 'Самостоятельный цифровой практикум на 3 вечера: пошаговые видеомодули в записи, готовые ИИ-шаблоны и ИИ-диагностика за 990 ₽. 100% автономный формат: проходите в своём темпе без расписания. Мастер-группа оплачивается отдельно. Состав и правила доступа указаны в оферте.'],
     light: ['ColibriOS Master-Group · Light', 79990],
     pro: ['ColibriOS Master-Group · Pro', 119990],
     swarm: ['ColibriOS Master-Group · Sovereign Swarm', 199990]
@@ -14,6 +14,7 @@
   if (!product) { status.textContent = 'Тариф не найден. Вернитесь к выбору формата.'; return; }
   document.getElementById('product-title').textContent = product[0];
   document.getElementById('product-price').textContent = new Intl.NumberFormat('ru-RU').format(product[1]) + ' ₽';
+  document.getElementById('product-description').textContent = product[2] || 'Отдельный формат внедрения ColibriOS Master-Group. Состав, сроки и правила доступа указаны в оферте. ИИ-Концентрат за 990 ₽ приобретается отдельно.';
   const support = document.getElementById('support-link');
   if (config.supportUrl && /^https:\/\//.test(config.supportUrl)) { support.href = config.supportUrl; support.hidden = false; }
   else if (config.supportEmail && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(config.supportEmail)) { support.href = 'mailto:' + config.supportEmail; support.hidden = false; }
