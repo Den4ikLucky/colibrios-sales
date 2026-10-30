@@ -1,0 +1,193 @@
+/* Global-First 5-Language Architecture Styles (EN / RU / ES / 中文 / 한국어) */
+html[data-global-first-5] {
+  --locale-zh-font: Manrope, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", Arial, sans-serif;
+  --locale-ko-font: Manrope, "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", "Noto Sans KR", Arial, sans-serif;
+  --locale-anchor-offset: 112px;
+  scroll-padding-top: calc(var(--locale-anchor-offset) + var(--safe-top, 0px));
+}
+html[data-global-first-5]:lang(zh),
+html[data-global-first-5]:lang(zh-CN),
+html[data-global-first-5]:lang(zh-Hans) {
+  --font: var(--locale-zh-font);
+  --measure-font: var(--locale-zh-font);
+}
+html[data-global-first-5]:lang(ko) {
+  --font: var(--locale-ko-font);
+  --measure-font: var(--locale-ko-font);
+}
+html[data-global-first-5] .language-switcher a:lang(zh),
+html[data-global-first-5] .language-switcher a:lang(zh-CN),
+html[data-global-first-5] .language-switcher a:lang(zh-Hans) {
+  font-family: var(--locale-zh-font);
+}
+html[data-global-first-5] .language-switcher a:lang(ko) {
+  font-family: var(--locale-ko-font);
+}
+html[data-global-first-5]:is(:lang(zh), :lang(zh-CN), :lang(zh-Hans), :lang(ko)) :is(pre, code, [data-ui]) {
+  font-family: "JetBrains Mono", var(--font);
+}
+html[data-global-first-5]:is(:lang(zh), :lang(zh-CN), :lang(zh-Hans), :lang(ko)) :is(h1, h2, h3, h4) {
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+html[data-global-first-5]:is(:lang(zh), :lang(zh-CN), :lang(zh-Hans), :lang(ko)) .hero h1 {
+  max-width: 100%;
+  line-height: 1.2;
+}
+html[data-global-first-5]:is(:lang(zh), :lang(zh-CN), :lang(zh-Hans)) body {
+  word-break: normal;
+  line-break: strict;
+  overflow-wrap: anywhere;
+}
+html[data-global-first-5]:lang(ko) body {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
+html[data-global-first-5] .site-header {
+  padding-block-start: var(--safe-top, 0px);
+}
+html[data-global-first-5] .site-header .nav {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto 288px;
+  grid-template-areas: "brand primary actions languages";
+  gap: 16px;
+  min-height: 80px;
+}
+html[data-global-first-5] .site-header .brand {
+  grid-area: brand;
+  white-space: nowrap;
+}
+html[data-global-first-5] .site-header #primary-nav {
+  grid-area: primary;
+  min-width: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0 16px;
+}
+html[data-global-first-5] .site-header .nav-cta {
+  grid-area: actions;
+  flex-wrap: nowrap;
+}
+html[data-global-first-5] .site-header .nav-cta .btn {
+  white-space: nowrap;
+}
+html[data-global-first-5] .language-switcher {
+  grid-area: languages;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 4px;
+  width: 288px;
+  min-width: 0;
+  padding: 4px;
+  border: 0;
+  outline: 1px solid var(--border);
+  outline-offset: -1px;
+  border-radius: 16px;
+  background: var(--surface);
+  overflow: visible;
+}
+html[data-global-first-5] .language-switcher a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  min-height: 48px;
+  padding: 8px 4px;
+  border: 0;
+  border-radius: 12px;
+  background: transparent;
+  color: var(--ink);
+  font: 650 14px/24px var(--font);
+  letter-spacing: 0;
+  white-space: nowrap;
+  word-break: normal;
+  text-decoration: none;
+  transition: background 0.18s;
+}
+html[data-global-first-5] .language-switcher a:hover {
+  background: var(--surface-2);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+html[data-global-first-5] .language-switcher a[aria-current="page"] {
+  background: var(--gold);
+  color: var(--onyx);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+@media (max-width: 1199px) {
+  html[data-global-first-5] .site-header .nav-cta > .small {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  html[data-global-first-5] {
+    --locale-anchor-offset: 160px;
+  }
+  html[data-global-first-5] .site-header .nav {
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas: "brand actions" "languages languages";
+    column-gap: 16px;
+    row-gap: 0;
+    padding-block-end: 8px;
+  }
+  html[data-global-first-5] .site-header .brand,
+  html[data-global-first-5] .site-header .nav-cta {
+    min-height: 80px;
+    align-self: stretch;
+  }
+  html[data-global-first-5] .site-header .language-switcher {
+    justify-self: end;
+  }
+  html[data-global-first-5] .site-header #primary-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    justify-content: start;
+    align-items: stretch;
+    gap: 16px;
+    max-height: calc(100dvh - var(--locale-anchor-offset) - var(--safe-top, 0px));
+    overflow: auto;
+  }
+  html[data-global-first-5] .site-header #primary-nav > a {
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  html[data-global-first-5] .site-header .portal-contents > div {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 767px) {
+  html[data-global-first-5] {
+    --locale-anchor-offset: 144px;
+  }
+  html[data-global-first-5] .site-header .wrap {
+    width: calc(100% - 32px);
+  }
+  html[data-global-first-5] .site-header .nav {
+    min-height: 64px;
+  }
+  html[data-global-first-5] .site-header .brand,
+  html[data-global-first-5] .site-header .nav-cta {
+    min-height: 64px;
+  }
+  html[data-global-first-5] .site-header .language-switcher {
+    width: 100%;
+    justify-self: stretch;
+  }
+}
+@media (max-width: 480px) {
+  html[data-global-first-5] .site-header .portal-contents > div {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html[data-global-first-5] .language-switcher a {
+    transition: none;
+  }
+}

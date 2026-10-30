@@ -805,7 +805,7 @@
       const identity = node('div', 'portal-proof-identity');
       const portrait = node('img');
       portrait.src = new URL(
-        '../' + message.item.posterSrc,
+        '/' + message.item.posterSrc.replace(/^\.\.\//, '').replace(/^\//, ''),
         document.querySelector('script[src$="landing.js"]').src,
       ).href;
       portrait.alt = '';

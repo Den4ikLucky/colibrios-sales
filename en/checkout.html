@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" data-global-first-5 data-locale="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050508">
+<title>ColibriOS · AI Concentrate · $19</title>
+<link rel="icon" href="/assets/favicon.svg"><link rel="stylesheet" href="/assets/styles.css">
+<script defer src="/assets/locales/en/config.js"></script><script defer src="/assets/locale-config.js"></script><script defer src="/assets/locales/en/checkout.js"></script>
+<style>.checkout{max-width:640px;margin:64px auto;padding:24px}.checkout h1{font-size:clamp(2rem,6vw,3.5rem);line-height:1.1}.checkout select,.checkout input{width:100%;min-width:0}.checkout p{max-width:65ch}.checkout nav{display:flex;gap:20px;flex-wrap:wrap;margin-top:32px}.checkout .price{color:#F59E0B;font-variant-numeric:tabular-nums;font-size:2rem}.checkout [role=status]{margin:24px 0;line-height:1.6}.checkout label{display:block;margin:20px 0 8px}.checkout button{margin-top:24px}#consent-label{display:flex;gap:12px}#consent{width:20px;flex:0 0 20px}body{overflow-wrap:anywhere}</style>
+<!-- LIVING_WEB_V3_STACK_START -->
+<link rel="preload" href="/assets/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/sl-ui/colibrios-adapter.css">
+<script type="module" src="/assets/locales/en/engines/sovereign-web.js"></script>
+
+<!-- Agentation endpoint="http://localhost:4747" is guarded inside sovereign-web.js; portable previews disable it. -->
+<!-- LIVING_WEB_V3_STACK_END -->
+<link rel="preload" href="/assets/fonts/manrope-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/global-first.css"><script defer src="/assets/global-first.js"></script></head>
+<body>
+<main class="checkout" id="main">
+<a href="/">ColibriOS · All formats</a>
+<h1 id="product-title">3-Evening Recorded AI Concentrate</h1>
+<p class="price" id="product-price">$19</p>
+<p id="product-description">Self-guided digital workshop for 3 evenings: recorded step-by-step video modules, ready-made AI templates and AI diagnostics for $19. 100% self-paced format: go at your own pace without a schedule. The master group is paid separately. The composition and access rules are specified in the offer.</p>
+<p role="status" id="checkout-status">We are checking payment availability...</p>
+<form id="checkout-form" hidden>
+<label for="email">Email for receipt and access</label><input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+<label for="currency">Account currency</label><select id="currency" name="currency"><option value="RUB">RUB · Russian rubles</option><option value="USD">USD · US dollars</option><option value="EUR">EUR · euro</option></select>
+<label for="method">Payment method</label><select id="method" name="method"><option value="SBP">Visa / Mastercard / Apple Pay / Crypto · QR on the Lava.top page</option><option value="CARD">Bank card</option></select>
+<label id="consent-label"><input type="checkbox" id="consent" required><span>I accept <a id="terms-link" href="/en/terms.html">offer</a> and conditions <a id="privacy-link" href="/en/privacy.html">order data processing</a>.</span></label>
+<button type="submit" class="btn full" id="pay-button">Open secure payment Lava.top</button>
+</form>
+<p class="muted">Card details are entered only on the payment service page. Returning to the site does not in itself confirm payment.</p>
+<a id="support-link" hidden>Contact support</a>
+<nav aria-label="Documents"><a href="/en/terms.html">Offer</a><a href="/en/privacy.html">Privacy</a><a href="https://colibrios.pro/tma_magnet/">Free diagnostics</a></nav>
+<noscript><p>To open a payment account, please enable JavaScript. Tariffs and offers are available via the links above.</p></noscript>
+</main>
+</body></html>
