@@ -1,0 +1,1513 @@
+{
+  "locale": "en",
+  "realms": [
+    "academy",
+    "courses",
+    "guides",
+    "kiosk",
+    "club",
+    "studio"
+  ],
+  "localePaths": {
+    "en": "denysviet-os-en",
+    "ru": "colibri-os-ru",
+    "es": "colibri-os-es"
+  },
+  "defaultCurrency": "USD",
+  "allowedCurrencies": [
+    "USD",
+    "EUR"
+  ],
+  "ui": {
+    "academy": "Book",
+    "courses": "Courses",
+    "guides": "Guides",
+    "kiosk": "Kiosk",
+    "club": "Club",
+    "studio": "Studio",
+    "coursesTitle": "Three tracks. A real first lesson in each.",
+    "coursesIntro": "Read the five sections of Module 01 and try its trainer. Modules 02-06 are summaries in preparation, not available lessons.",
+    "freeLesson": "First lesson free",
+    "openLesson": "Read Module 01 + trainer",
+    "planned": "In preparation",
+    "available": "Available",
+    "backCourses": "All courses",
+    "lessons": "Lessons",
+    "nextLesson": "Next lesson: in preparation",
+    "trainer": "Interactive trainer",
+    "prev": "Previous",
+    "next": "Next",
+    "copyPrompt": "Copy prompt",
+    "copied": "Copied",
+    "copyFailed": "Copy unavailable; select the text manually.",
+    "subject": "Subject",
+    "subjectPlaceholder": "A ceramic cup on a studio table",
+    "validNumbers": "Enter valid numbers within the shown limits.",
+    "funnelAssumptions": "Illustrative gross-revenue model, not a forecast or profit claim. Leads = views x comment rate; initial buyers = leads x initial conversion; core buyers = initial buyers x core conversion. Fractional buyers are expected values. No tax, refunds, acquisition costs or platform fees are included. Prices are editable assumptions in the selected currency.",
+    "guidesTitle": "24 guides. 28 terms. No registration.",
+    "search": "Search titles, summaries and tags",
+    "all": "All",
+    "guideTab": "Guides",
+    "glossaryTab": "Glossary",
+    "showing": "Showing {visible} of {total} guides",
+    "noResults": "No guides match",
+    "clear": "Clear search",
+    "readGuide": "Read guide",
+    "preview": "Free preview",
+    "prompt1": "First complete prompt",
+    "endPreview": "End of preview. Additional source material is not published here. No login, email or payment can unlock unpublished content.",
+    "clubTitle": "Six local consultant templates.",
+    "localTemplate": "Browser-local template, not live AI",
+    "templateNote": "This browser assembles the supplied scenario and output structure. It does not run an AI model or produce a verified recommendation.",
+    "context": "Your working context",
+    "contextPlaceholder": "[Add a non-sensitive project example]",
+    "outputFormat": "Output blueprint",
+    "previewTemplate": "Preview template",
+    "copyTemplate": "Copy template",
+    "trophies": "Five trophy concepts",
+    "concept": "Concept",
+    "conceptNote": "Concept artwork for a future club. These are CSS illustrations, not 3D models, and none can be earned yet.",
+    "futureCriterion": "Proposed future criterion",
+    "nameLabel": "Display name preview (this browser only)",
+    "yourName": "Your name",
+    "bookNote": "Preserved English manuscript: Chapters 01-05 are complete public chapters; Chapters 06-17 are transparent previews. Russian and Spanish book translations are not complete. FlipHTML5 publication and embedding are planned, not connected.",
+    "commercialNote": "Reference catalog prices only. Paid modules, memberships, checkout and automatic delivery are not connected. No purchase or membership is created here.",
+    "sovereignNote": "Creative production sprints are separate from Sovereign infrastructure. Sovereign deployment starts at the price below and is not included in a creative sprint.",
+    "quoteOnly": "Quote pending",
+    "currency": "Currency",
+    "close": "Close",
+    "lessonUnavailable": "Only Module 01 is available. Later modules are in preparation.",
+    "referencePrice": "Reference price",
+    "bundleTitle": "Planned bundles and product ladder",
+    "cat_agents": "Agents",
+    "cat_content": "Content",
+    "cat_funnels": "Funnels",
+    "cat_vibecoding": "Vibe Coding",
+    "cat_visuals": "Visuals"
+  },
+  "courses": [
+    {
+      "slug": "course-a-vibecoding",
+      "title": "Vibe-Coding & AI Workshop from Scratch",
+      "subtitle": "From prompt interrogation and tz.md specifications to deployed Telegram bots, full-stack web applications, and autonomous agent systems.",
+      "priceKey": "courseA",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "title": "Module 01: Architectural Framing, Prompt Interrogation & Project Grounding",
+          "summary": "Master the transition from naive chat prompts to immutable tz.md contracts, the 4-Coordinate task framing method, and initial repository setup."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Module 02: Context Engineering, AGENTS.md Contracts & Git Worktrees",
+          "summary": "Prevent context window token rot, establish project root AGENTS.md contracts, and isolate agent execution in parallel Git worktrees."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Module 03: MCP Protocol, Database Introspection & Schema Migrations",
+          "summary": "Deploy Model Context Protocol servers to connect coding agents to PostgreSQL, SQLite, and Supabase with strict read-only safety gates."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Module 04: Full-Stack Web App Scaffolding: Next.js, Tailwind & Supabase",
+          "summary": "Direct autonomous agents to build responsive web applications with semantic Tailwind design tokens, Radix UI primitives, and secure Supabase RLS."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Module 05: Autonomous Telegram Bots, Webhooks & Event Handlers",
+          "summary": "Build resilient asynchronous webhook pipelines in n8n and Node.js that process codeword triggers, log client leads, and deliver digital assets."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Module 06: Closed-Loop Testing, Automated QA Critics & Production Deployment",
+          "summary": "Implement 2-agent builder-critic verification loops, automated unit and visual regression gates, and zero-downtime server deployments."
+        }
+      ],
+      "freeModule01": {
+        "title": "Module 01: Architectural Framing, Prompt Interrogation & Project Grounding",
+        "wordCounts": 1175,
+        "sections": [
+          {
+            "heading": "1. The Transition from Naive Prompting to Architectural Directing",
+            "content": "The widespread adoption of large language models has fundamentally altered the nature of software engineering, yet the vast majority of developers continue to experience severe friction. The primary reason is that most developers treat an AI model as an conversational oracle or an interactive autocomplete engine. They open an empty chat window, paste vague fragments of code, and write casual conversational prompts such as 'make me a web app that tracks expenses and has user login.'\n\nWhen presented with such ambiguous, ungrounded instructions, language models do what they are statistically optimized to do: they hallucinate plausible-looking structures. The model invents arbitrary file names, imports third-party packages that may be outdated or deprecated, forgets critical edge cases, and creates fragmented architectures that fail immediately upon execution. The developer then spends hours in an exhausting debugging spiral, arguing with the model in chat and attempting to patch errors by copying and pasting fragmented code back and forth.\n\nVibe-coding, as practiced by elite autonomous builders, rejects this conversational chaos entirely. In professional AI engineering, the human developer does not write individual lines of repetitive syntax; instead, the human operates as the Chief System Architect and Principal Critic. The model serves as a deterministic compiler and executor. To achieve this level of operational reliability, every project must begin with rigorous architectural directing. You must establish explicit project boundaries, specify the technical stack, enforce non-negotiable architectural invariants, and isolate tools before a single line of application code is generated."
+          },
+          {
+            "heading": "2. The Grounding Contract: tz.md and Immutable Specifications",
+            "content": "Before launching any autonomous coding agent, you must create an immutable specification contract, codified in our methodology as tz.md. The purpose of tz.md is to freeze the problem domain and eliminate ambiguity. A model cannot respect project boundaries if those boundaries exist only inside your head. When boundaries are omitted, models naturally suffer from scope expansion, inventing features that you never requested and introducing unnecessary architectural complexity.\n\nA production-ready tz.md document contains five mandatory sections. First, the Core Problem and Desired Outcome, describing exactly what operational friction the software resolves from the perspective of the end user. Second, Technical Constraints, specifying the runtime language, database engine, UI framework, and performance limits. Third, and most crucially, the Non-Goals list. The Non-Goals section explicitly details what the system must NOT do during this development iteration. Defining non-goals is the single most effective technique for preventing agent hallucinations and bloated codebases.\n\nFourth, the specification defines the Exact Data Schema and Component Contracts, detailing table fields, API request payloads, and component interfaces. Fifth, the document establishes the Binary Verification Checklist, containing deterministic unit tests, build commands, and visual criteria that prove task completion. By anchoring the agent to tz.md, you transform an unpredictable creative generator into a disciplined, bounded implementation machine."
+          },
+          {
+            "heading": "3. The 4-Coordinate Task Framing Method",
+            "content": "Once the project specification is established in tz.md, you interact with coding agents using the 4-Coordinate Task Framing Method. This methodology guarantees that every prompt provided to an agent is mathematically bounded across four orthogonal dimensions: Persona, Objective, Constraints, and Verification Output. If even one coordinate is omitted, the model will interpolate the missing information using its training averages, introducing generic patterns that degrade system quality.\n\nCoordinate 1 is the Persona. You do not tell the model to 'act like an expert.' Instead, you assign a precise operational role bound to specific tools: 'Act as a Senior Database Reliability Engineer responsible for PostgreSQL migrations using local CLI utilities.' This restricts the model's vocabulary and biases its decision-making toward defensive, production-grade patterns. Coordinate 2 is the Objective, formulated as a single, unambiguous statement of work: 'Refactor the authentication middleware to validate Supabase JWT tokens on protected routes.'\n\nCoordinate 3 represents Constraints and Negative Rules. Here you list explicit technical prohibitions: 'Do not install new npm dependencies. Do not modify the existing database schema. Do not use any client-side state for authorization tokens. Ensure all file edits are performed using targeted string replacements rather than full file overwrites.' Coordinate 4 is the Verification Output: 'Execute the automated test suite via terminal, verify that all 12 tests pass with zero warnings, and emit a structured JSON receipt containing the git diff hash and exit code.' By framing tasks with all four coordinates, you achieve reproducible engineering execution."
+          },
+          {
+            "heading": "4. Hands-On Walkthrough: Scaffolding Your First Clean Repository",
+            "content": "Let us walk through the exact terminal commands required to scaffold your first autonomous repository. We begin by creating a clean directory and initializing Git version control. Immediately upon initialization, we configure an AGENTS.md contract in the project root. This file communicates directly with autonomous coding agents such as Claude Code, Cursor, and Codex, establishing the rules of engagement before any tool calls are executed.\n\nIn AGENTS.md, you declare the project directory layout, permissible terminal commands, and linting rules. For example, you specify that all shared UI components must reside in components/ui/, all API endpoints must be located under app/api/, and all database queries must utilize parameterized SQL to prevent injection vulnerabilities. Furthermore, you configure pre-commit hooks that automatically run static analysis tools before any code can be committed to the repository.\n\nNext, you establish an isolated Git worktree. Rather than allowing an autonomous agent to execute modifications directly on your main branch, you check out a feature worktree in a dedicated sibling directory. This ensures that the agent works in complete isolation. If the agent makes a mistake, your main codebase remains completely untouched. You can inspect the agent's work, review the git diff, execute automated tests, and merge the branch cleanly with zero risk to ongoing operations."
+          },
+          {
+            "heading": "5. Common Traps, Token Rot Defense & Bridge to Module 02",
+            "content": "As you embark on vibe-coding, you must defend your systems against the most pervasive hazard in AI engineering: Context Window Rot. Language models possess a finite context window. As a chat session grows longer, containing thousands of lines of terminal logs, error traces, and redundant conversational exchanges, the model's attention mechanism begins to degrade. Earlier system instructions and negative constraints lose mathematical weight, causing the agent to repeat previously resolved mistakes and introduce subtle bugs.\n\nTo defend against token rot, you must maintain ruthless context hygiene. First, keep active agent sessions strictly below 25 interaction turns. When a specific subtask is completed, do not continue chatting in the same window. Instead, record the verified progress into a markdown handoff file on disk, commit your Git changes, and open a completely fresh session. The fresh session reads the project AGENTS.md and the handoff document, starting with maximum attention capacity and zero conversational baggage.\n\nSecond, never allow agents to print massive file contents or entire database dumps directly into chat. Utilize targeted grep and search tools to inspect only the exact lines requiring modification. By maintaining clean context windows and disciplined specification contracts, you establish the foundation for advanced agentic engineering. In Module 02, we will build upon this foundation by integrating dynamic Model Context Protocol servers, connecting your agents directly to local PostgreSQL databases, and deploying autonomous multi-agent refactoring pipelines."
+          }
+        ]
+      },
+      "interactiveSimulator": {
+        "id": "trainer-1-prompt-stepper",
+        "name": "Prompt Part Stepper",
+        "description": "Interactive 6-step prompt compiler transforming loose conversational ideas into strict, deterministic engineering specifications.",
+        "steps": [
+          {
+            "stepNumber": 1,
+            "name": "Persona",
+            "label": "1. Operational Role & Persona",
+            "placeholder": "Act as a Senior Database Reliability Engineer specializing in PostgreSQL CLI migrations..."
+          },
+          {
+            "stepNumber": 2,
+            "name": "Objective",
+            "label": "2. Primary Objective",
+            "placeholder": "Refactor the authentication middleware to validate Supabase JWT tokens on protected routes..."
+          },
+          {
+            "stepNumber": 3,
+            "name": "Context",
+            "label": "3. Project Context & Current State",
+            "placeholder": "Repository is built with Next.js 15 App Router, Tailwind CSS, and local SQLite/PostgreSQL..."
+          },
+          {
+            "stepNumber": 4,
+            "name": "Constraints",
+            "label": "4. Technical Constraints & Permitted Tools",
+            "placeholder": "Use only local CLI tools, maintain strict TypeScript types with zero 'any', enforce 8pt spacing..."
+          },
+          {
+            "stepNumber": 5,
+            "name": "NegativeRules",
+            "label": "5. Negative Rules (Strict Bans)",
+            "placeholder": "Do not install new npm packages. Do not overwrite whole files. Do not modify schema without migration..."
+          },
+          {
+            "stepNumber": 6,
+            "name": "VerificationOutput",
+            "label": "6. Output Verification & Receipt Schema",
+            "placeholder": "Execute automated test suite in terminal, report exit code, and emit structured JSON receipt..."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "course-b-solopreneur",
+      "title": "AI Solopreneur: One-Person Business & Auto-Funnels",
+      "subtitle": "From high-margin mafia offer architecture and zero-link codeword funnels to automated client delivery and recurring club economics.",
+      "priceKey": "courseB",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "title": "Module 01: The 1/10 Value Mafia Offer & Economic De-risking",
+          "summary": "Structure commercial proposals priced at no more than 10% of quantifiable client return, with ironclad risk-reversal guarantees."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Module 02: Zero-Link Codeword Funnels & Direct Message Conversion",
+          "summary": "Bypass social media link penalties by deploying automated codeword listener bots that qualify leads and deliver resources via direct message."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Module 03: 48-Hour Conversion Pipelines & Tripwire Monetization",
+          "summary": "Capitalize on peak prospect attention in the initial 48 hours to liquidate customer acquisition costs with $19-$59 impulse tripwires."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Module 04: Asynchronous Recurring Communities & 90%+ Retention Engineering",
+          "summary": "Build membership models that eliminate live Zoom burn-out through weekly digital asset drops, automated model studios, and code teardowns."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Module 05: B2B Implementation Sprints, Statement of Work & Enterprise Procurement",
+          "summary": "Package 14-day agent deployment sprints ($2,500-$4,500) with 50/50 payment tranches, formal acceptance protocols, and legal risk reversals."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Module 06: Autonomous Solo Operations: Idempotent Briefings & Financial Ledger",
+          "summary": "Deploy daily 08:30 cron intelligence briefs, automate double-entry bookkeeping, and manage a high-profit solo business under 20 hours a week."
+        }
+      ],
+      "freeModule01": {
+        "title": "Module 01: The 1/10 Value Mafia Offer & Economic De-risking",
+        "wordCounts": 981,
+        "sections": [
+          {
+            "heading": "1. Why Most Solopreneur Offers Fail in the Market",
+            "content": "The overwhelming majority of digital consultants, freelancers, and aspiring solopreneurs struggle with inconsistent revenue and exhausting sales negotiations. The root cause of this persistent struggle is that most creators sell commodity inputs rather than guaranteed economic outcomes. They package their services as billable hours, monthly retainer calls, or generic deliverables such as 'social media management,' 'technical audits,' or 'workflow consulting.'\n\nWhen you sell inputs, prospective clients naturally view your fee as an expense to be minimized. The procurement discussion immediately becomes a contentious negotiation over hourly rates and deliverable checklists. Furthermore, selling hours creates a hard mathematical ceiling on your income: because time is finite, increasing your earnings requires either working unsustainable 70-hour weeks or attempting to convince skeptical clients to accept arbitrary rate hikes.\n\nThe autonomous solopreneur model completely breaks this linear trap. Instead of trading time for money, the elite solopreneur sells an operational transformation. You identify a quantifiable financial bleed or revenue bottleneck inside a specific business niche, engineer an automated agent system that permanently eliminates that bottleneck, and package the solution as a high-margin productized sprint. To execute this model, you must master the art of the unrefusable commercial proposal: the Mafia Offer."
+          },
+          {
+            "heading": "2. The Mathematical Asymmetry of the 1/10 Value Rule",
+            "content": "At the heart of high-converting commercial proposals lies the 1/10 Value Rule. This principle establishes mathematical asymmetry between the contractual investment and the client's verifiable upside. Specifically, the total price of your productized sprint must represent no more than 10% of the documented financial return or operational labor savings delivered to the client over a twelve-month horizon.\n\nConsider a practical B2B scenario. An e-commerce distributor employs three administrative coordinators who spend forty hours each week manually reconciling supplier invoices, updating inventory databases, and answering routine order inquiries. The direct labor cost of this repetitive workflow exceeds $120,000 annually. By deploying an autonomous multi-agent pipeline that automates 90% of this manual data entry, your system delivers $100,000 in net annual labor savings.\n\nUnder the 1/10 Value Rule, pricing your two-week deployment sprint at $9,900 represents less than 10% of the first-year economic benefit. To the business owner and chief financial officer, approving your proposal is not an expense; it is a capital allocation decision with a guaranteed 10x return on investment. The negotiation ceases to be about your hours or technology stack, focusing exclusively on how quickly your system can be deployed."
+          },
+          {
+            "heading": "3. Structuring the A-to-B Operational Transformation Bridge",
+            "content": "A compelling mafia offer must be articulated as a frictionless journey from the client's painful Point A to their desired Point B. Point A represents their current operational reality, characterized by specific financial losses, team burnout, and manual errors. Point B represents the optimized future state, defined by automated pipelines, real-time dashboard visibility, and liberated executive capacity.\n\nTo build this transformation bridge, your proposal must avoid technical jargon. Corporate clients do not care about vector embeddings, transformer architectures, or Python frameworks; they care about concrete operational results. You structure the statement of work into three unambiguous phases: 1. Forensic Discovery & Specification (Days 1-3), where you map existing data schemas and establish acceptance criteria; 2. Automated Agent Pipeline Build (Days 4-10), where agents are configured and integrated; 3. Team Onboarding & Verification (Days 11-14), where systems are pressure-tested.\n\nPayment terms should reinforce client confidence while safeguarding your cash flow. The industry gold standard is a structured 50/50 milestone agreement: 50% deposit paid upon project kickoff to cover initial infrastructure and compute expenses, and the remaining 50% paid upon verified completion against the objective acceptance criteria defined in the initial specification."
+          },
+          {
+            "heading": "4. Engineering Unconditional Risk Reversals",
+            "content": "Even when presented with exceptional value, corporate decision-makers often hesitate due to professional risk aversion. The manager approving your contract fears that if the system fails or disrupts existing workflows, their reputation inside the organization will be damaged. To eliminate this hesitation, your proposal must incorporate an ironclad, mathematically grounded risk reversal guarantee.\n\nAn effective risk reversal transfers the operational risk entirely from the client to the service provider. For example: 'If the automated agent pipeline does not successfully process and reconcile at least 95% of incoming supplier documents during the initial 14-day production pilot, we will immediately refund 100% of your deposit and transfer all configured scripts and database connectors to your internal IT team at zero additional charge.'\n\nSuch a guarantee is psychologically transformative. It completely disarms procurement skepticism and demonstrates unshakeable confidence in your engineering methodology. Because your agent systems are built on proven, modular architectures and verified against strict test suites, your actual refund rate remains virtually zero, while your commercial conversion rate triples."
+          },
+          {
+            "heading": "5. The Solopreneur Unit Economics Calculator & Bridge to Module 02",
+            "content": "To build a durable one-person enterprise, you must manage your personal capacity and financial metrics with absolute precision. A solopreneur is not an employee without a boss; a solopreneur is a media and systems company operated by a single shareholder. Your financial model must maintain a gross margin floor of at least 80%, accounting for model API token costs, cloud hosting, and payment gateway fees.\n\nBy standardizing your offering around three structured tiers -- a $19-$59 self-serve impulse entry asset, a $390-$990 foundational training sprint, and a $2,500-$4,500 turnkey B2B implementation sprint -- you create a balanced revenue portfolio. The low-ticket assets liquidate your client acquisition costs, while the high-ticket sprints deliver substantial net monthly income with a manageable workload of 2 to 4 client deployments per month.\n\nIn our built-in Microfunnel Unit Economics Calculator, you can simulate your monthly cash flow by adjusting traffic volume, lead conversion rates, and sprint pricing. In Module 02, we will operationalize this economic foundation by constructing your inbound traffic engine: building Zero-Link Codeword Funnels, automating direct message lead qualification in Telegram, and converting social video viewers into paying clients without spending a single dollar on paid advertising."
+          }
+        ]
+      },
+      "interactiveSimulator": {
+        "id": "trainer-2-microfunnel-calc",
+        "name": "Microfunnel Unit Economics Calculator",
+        "description": "Interactive financial modeling engine calculating monthly traffic, opt-in rates, tripwire revenue, core offer conversions, and net profit margins.",
+        "parameters": [
+          {
+            "id": "monthlyTraffic",
+            "name": "Monthly Video Views",
+            "defaultValue": 50000,
+            "min": 5000,
+            "max": 500000,
+            "step": 5000
+          },
+          {
+            "id": "codewordRate",
+            "name": "Codeword Comment Rate (%)",
+            "defaultValue": 3.5,
+            "min": 0.5,
+            "max": 10.0,
+            "step": 0.5
+          },
+          {
+            "id": "tripwirePrice",
+            "name": "Tripwire Price (USD)",
+            "defaultValue": 19,
+            "min": 9,
+            "max": 59,
+            "step": 10
+          },
+          {
+            "id": "tripwireConversion",
+            "name": "Tripwire Conversion (%)",
+            "defaultValue": 8.0,
+            "min": 2.0,
+            "max": 20.0,
+            "step": 1.0
+          },
+          {
+            "id": "coreOfferPrice",
+            "name": "Core Offer Price (USD)",
+            "defaultValue": 390,
+            "min": 190,
+            "max": 990,
+            "step": 50
+          },
+          {
+            "id": "coreOfferConversion",
+            "name": "Core Offer Conversion (%)",
+            "defaultValue": 5.0,
+            "min": 1.0,
+            "max": 15.0,
+            "step": 0.5
+          }
+        ],
+        "outputs": [
+          {
+            "id": "leadsCaptured",
+            "name": "Monthly Leads",
+            "formula": "monthlyTraffic * (codewordRate / 100)"
+          },
+          {
+            "id": "tripwireBuyers",
+            "name": "Tripwire Buyers",
+            "formula": "leadsCaptured * (tripwireConversion / 100)"
+          },
+          {
+            "id": "tripwireRevenue",
+            "name": "Tripwire Cash (USD)",
+            "formula": "tripwireBuyers * tripwirePrice"
+          },
+          {
+            "id": "coreBuyers",
+            "name": "Core Offer Clients",
+            "formula": "tripwireBuyers * (coreOfferConversion / 100)"
+          },
+          {
+            "id": "coreRevenue",
+            "name": "Core Revenue (USD)",
+            "formula": "coreBuyers * coreOfferPrice"
+          },
+          {
+            "id": "totalGrossRevenue",
+            "name": "Total Monthly Revenue",
+            "formula": "tripwireRevenue + coreRevenue"
+          }
+        ]
+      }
+    },
+    {
+      "slug": "course-c-content-factory",
+      "title": "Content Factory 3.0, GPT Image 2.6 & AI Avatars",
+      "subtitle": "From 5-axis optical prompting and FaceID character consistency to 41s seamless loops, Google Flow Omni motion, and lifelike neural presenters.",
+      "priceKey": "courseC",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "title": "Module 01: The 5-Axis Optical Prompting Standard & Studio Camera Physics",
+          "summary": "Eliminate plastic AI skin and artificial gloss by calibrating diagonal FOV degrees, Kelvin lighting ratios, and physical camera sensor profiles."
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Module 02: FaceID Character Locking & 15-Panel Master Turnaround Sheets",
+          "summary": "Lock facial geometry, emotional expressions, and wardrobe textures to generate identical human characters across hundreds of episodic scenes."
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Module 03: 41-Second Seamless Cinema Loops & Vertical Video Retention",
+          "summary": "Script and edit vertical video shorts where the closing sentence connects invisibly to the opening hook, multiplying replay watch time."
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Module 04: 10-Second Physical Motion Staging in Google Flow Omni 1.2 Flash",
+          "summary": "Direct fluid, physically accurate commercial product videos and architectural fly-throughs with constant camera velocity and zero morphing."
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Module 05: Neural Voice Synthesis, Breath Tags & Lip-Synced AI Presenters",
+          "summary": "Generate authoritative video presenters with phoneme-accurate lip-syncing, natural eye micro-blinks, and authentic human breath pacing."
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Module 06: Automated Multi-Platform Content Engine: Covers, Carousels & Reels",
+          "summary": "Orchestrate an autonomous factory publishing 3-object CTR covers, diagnostic carousels, and vertical reels daily via scheduled command-line runners."
+        }
+      ],
+      "freeModule01": {
+        "title": "Module 01: The 5-Axis Optical Prompting Standard & Studio Camera Physics",
+        "wordCounts": 915,
+        "sections": [
+          {
+            "heading": "1. Diagnosing AI Visual Slop and Plastic Artifacts",
+            "content": "The explosion of generative image models has flooded social media and corporate websites with recognizable visual slop. The defining hallmark of amateur AI generation is an unmistakable artificial sheen: waxy skin textures, airbrushed poreless complexions, exaggerated HDR glows, and flat, uniform specular lighting. Models configured with naive single-sentence prompts invariably produce subjects that look like digital mannequins rather than authentic human beings.\n\nThis visual artificiality is fatal for brand credibility and commercial advertising. Viewers have developed acute subconscious pattern recognition; the moment a prospective client detects uncanny valley distortions or synthetic porcelain skin in a product photo or promotional video, their trust collapses. They immediately perceive the company as cheap, unverified, and lacking operational substance.\n\nHigh-end commercial production demands physical authenticity. In professional creative studios, generative tools such as GPT Image 2.6 are operated not as casual fantasy text toys, but as virtual digital cameras adhering to rigorous laws of optics, physics, and cinematography. To produce commercial-grade visual assets that rival six-figure studio photography shoots, you must replace conversational adjectives with calibrated camera parameters."
+          },
+          {
+            "heading": "2. Deconstructing the 5 Visual Axes of Professional Directing",
+            "content": "The 5-Axis Optical Prompting Standard provides a rigorous mathematical framework for directing image and video models. Instead of stuffing prompts with useless buzzwords like 'hyperrealistic, 8k, masterpiece, trending on ArtStation,' you calibrate five orthogonal physical dimensions that govern real camera optics.\n\nAxis 1 is the Diagonal Field of View (FOV) in exact degrees. Specifying lens geometry in degrees rather than focal length millimeters eliminates perspective ambiguity across varying virtual sensor crop factors. An 84-degree FOV produces dynamic wide-angle environmental context; a 54-degree FOV matches natural human eye perception; a 28-degree FOV delivers flattering, compressed portrait telephoto perspectives.\n\nAxis 2 is Lighting Color Temperature in Kelvin. You replace vague descriptions like 'bright light' with precise thermal ratios: a 5600K daylight key light combined with a 3200K warm tungsten rim light establishes professional cinematic color separation. Axis 3 is the Physical Medium and Sensor Profile, naming specific camera hardware such as Hasselblad medium-format CMOS or 35mm Kodak Portra film stock to dictate micro-contrast, noise distribution, and dynamic range.\n\nAxis 4 is Spatial Staging and Focal Plane Geometry, detailing camera height, subject distance, and aperture depth of field (e.g. f/2.8 with smooth optical bokeh falloff). Axis 5 represents Physical Material Tokens (PBR), declaring exact surface roughness, metallic reflectivity, and subsurface scattering properties. By systematically tuning all five axes, you control the image with photographic precision."
+          },
+          {
+            "heading": "3. Calibrating Studio Lighting and Sensor Profiles in GPT Image 2.6",
+            "content": "Let us examine how to implement this optical standard in GPT Image 2.6. When prompting for human subjects, authentic skin rendering requires micro-contrast calibration. Natural skin is not a flat opaque barrier; it is a translucent multilayered biological tissue that scatters light beneath its surface, creating warm transitions along shadow terminators.\n\nIn your prompt specification, you instruct the model to render physical skin pores, natural vellus hair along the jawline, and subtle micro-tonal variations. For studio hardware setups, you declare a three-point lighting layout: 'A large 120cm octabox softbox positioned 45 degrees camera-left at 5600K providing soft directional wrap, balanced by a subtle silver reflector camera-right, and an overhead warm tungsten 3200K hair light providing rim separation against a dark matte backdrop.'\n\nTo achieve organic photographic texture, you introduce physical sensor noise: 'Captured on a full-frame 50MP CMOS sensor with natural optical grain, zero digital sharpening artifacts, and calibrated dynamic range preserving highlight roll-off in the forehead reflections.' The resulting render possesses the tangible acoustic quality of a real editorial magazine photograph."
+          },
+          {
+            "heading": "4. Negative Constraint Engineering and Slop Elimination",
+            "content": "What you forbid an AI model from generating is just as important as what you request. Generative models possess strong default biases toward oversaturated, glossy aesthetic tropes learned from millions of digital art portfolios. If you do not actively suppress these biases through negative constraints, the model will inevitably inject synthetic gloss.\n\nA production-grade negative rule block must be included in every visual prompt specification. You explicitly prohibit: 'plastic skin, airbrushed textures, porcelain smoothing, CGI mannequin appearance, distorted facial anatomy, extra fingers, cartoonish saturation, excessive post-processing HDR, floating bokeh balls, and fake glowing edges.'\n\nFurthermore, you ban digital text distortions and watermark artifacts by enforcing: 'zero burned-in typography, zero logos, zero framing borders, and zero chromatic aberration fringes on high-contrast edges.' This defensive engineering guarantees that the model concentrates its compute budget exclusively on physical rendering accuracy, delivering pristine source assets ready for commercial deployment."
+          },
+          {
+            "heading": "5. The Visual Calibration Lab & Bridge to Module 02",
+            "content": "Mastering single-frame optical calibration is the crucial first milestone of Content Factory 3.0. In our built-in 5-Axis Visual Prompt Calibrator, you can interactively adjust camera angles, lighting Kelvin sliders, and sensor profiles to observe how each parameter alters the generated prompt syntax in real time.\n\nHowever, commercial campaigns and episodic storytelling require more than isolated single images. The ultimate test of visual production is maintaining absolute character identity across dozens of different camera angles, wardrobe changes, and lighting environments. If your protagonist's face morphs between slides in an Instagram carousel or scenes in a video ad, the entire production collapses.\n\nIn Module 02, we will resolve character consistency permanently. You will learn the FaceID Character Locking methodology, constructing 15-panel master reference turnaround sheets that freeze facial geometry and wardrobe textures across hundreds of episodic scenes. You will then bridge these consistent characters into Module 03, animating them into seamless 41-second vertical cinema loops and high-retention video showreels."
+          }
+        ]
+      },
+      "interactiveSimulator": {
+        "id": "trainer-3-visual-5axis",
+        "name": "5-Axis Visual Prompt Calibrator",
+        "description": "Interactive visual calibration studio tuning Diagonal FOV degrees, Kelvin lighting color temperature, camera sensor medium, spatial staging, and PBR textures.",
+        "axes": [
+          {
+            "id": "fovAxis",
+            "name": "Axis 1: Diagonal Field of View (FOV)",
+            "presets": [
+              {
+                "value": "84deg",
+                "label": "84\u00b0 Dynamic Wide Angle"
+              },
+              {
+                "value": "54deg",
+                "label": "54\u00b0 Human Eye Natural Standard"
+              },
+              {
+                "value": "28deg",
+                "label": "28\u00b0 Compressed Studio Portrait"
+              }
+            ],
+            "default": "54deg"
+          },
+          {
+            "id": "lightingAxis",
+            "name": "Axis 2: Lighting Color Temperature (Kelvin)",
+            "presets": [
+              {
+                "value": "5600K_3200K",
+                "label": "5600K Daylight Key + 3200K Tungsten Rim"
+              },
+              {
+                "value": "3200K_studio",
+                "label": "3200K Pure Warm Studio Tungsten"
+              },
+              {
+                "value": "6500K_overcast",
+                "label": "6500K Diffuse Nordic Overcast"
+              }
+            ],
+            "default": "5600K_3200K"
+          },
+          {
+            "id": "mediumAxis",
+            "name": "Axis 3: Medium & Physical Sensor Profile",
+            "presets": [
+              {
+                "value": "hasselblad_cmos",
+                "label": "Hasselblad H6D Medium Format 50MP CMOS"
+              },
+              {
+                "value": "kodak_portra_400",
+                "label": "35mm Analog Kodak Portra 400 Film Stock"
+              },
+              {
+                "value": "iphone16pro_cmos",
+                "label": "Apple iPhone 16 Pro Cinematic Sensor"
+              }
+            ],
+            "default": "hasselblad_cmos"
+          },
+          {
+            "id": "stagingAxis",
+            "name": "Axis 4: Spatial Staging & Depth of Field",
+            "presets": [
+              {
+                "value": "f28_bokeh",
+                "label": "f/2.8 Shallow Depth with Smooth Optical Bokeh"
+              },
+              {
+                "value": "f8_deep",
+                "label": "f/8.0 Deep Focus Environmental Sharpness"
+              }
+            ],
+            "default": "f28_bokeh"
+          },
+          {
+            "id": "pbrAxis",
+            "name": "Axis 5: PBR Material Shading & Micro-Contrast",
+            "presets": [
+              {
+                "value": "skin_subsurface",
+                "label": "Biological Subsurface Scattering & Skin Pores"
+              },
+              {
+                "value": "matte_obsidian",
+                "label": "Brushed Dark Obsidian & Anodized Titanium"
+              }
+            ],
+            "default": "skin_subsurface"
+          }
+        ]
+      }
+    }
+  ],
+  "guides": [
+    {
+      "slug": "guide-01-claude-skills-starter",
+      "category": "vibecoding",
+      "codeword": "SKILLS",
+      "title": "10 Custom Skills for Claude Code & Cursor: The Complete Starter Pack",
+      "summary": "Transform coding assistants from generic code editors into specialized architectural executors with custom skill definitions.",
+      "openPreview60": [
+        "Most developers use AI coding tools as glorified autocomplete, asking questions in freeform chat and manually copy-pasting code snippets. This approach inevitably causes hallucinated dependencies, forgotten edge cases, and fragmented project architectures.",
+        "Custom skills solve this by establishing reusable, deterministic instructions that load automatically whenever specific project patterns or commands are triggered. Instead of re-explaining project conventions in every chat turn, skills provide instant procedural memory.",
+        "By bundling input validations, tool execution schemas, and acceptance criteria into a single SKILL.md file, you ensure that every subagent adheres to strict repository standards with zero prompt drift."
+      ],
+      "prompt1": "Review the current repository structure. Identify recurring multi-step developer operations (e.g. database migrations, API endpoint scaffolding, visual component audits). Create a new skill directory in .agents/skills/ with a structured SKILL.md containing YAML frontmatter, execution rules, and command examples."
+    },
+    {
+      "slug": "guide-02-codex-desktop-architecture",
+      "category": "vibecoding",
+      "codeword": "CODEX",
+      "title": "OpenAI Codex Desktop App: Local Sandboxing & Git Worktrees",
+      "summary": "Configure isolated developer environments that allow autonomous coding agents to build, test, and commit features without breaking main branches.",
+      "openPreview60": [
+        "Running autonomous coding models directly on your active working directory is a recipe for disaster. One unvalidated file edit or accidental dependency install can corrupt your local configuration and halt ongoing client work.",
+        "Git worktrees provide the ideal architectural solution. By checking out multiple branches simultaneously into isolated folders on disk, you allow agents to work in parallel without file locking or merge conflicts.",
+        "Combined with local sandboxing rules that restrict terminal commands to authorized subdirectories, worktrees give you the confidence to run background agent batches while continuing your focus uninterrupted."
+      ],
+      "prompt1": "Create an automated script scripts/spawn-worktree.sh that takes a feature slug, creates an isolated Git worktree at ../worktrees/<slug>, copies approved environment tokens without secrets, and initializes an agent session bound exclusively to that worktree."
+    },
+    {
+      "slug": "guide-03-mcp-server-integration",
+      "category": "vibecoding",
+      "codeword": "DATABASE",
+      "title": "Deploying MCP Servers for Real Database Operations & Migrations",
+      "summary": "Connect coding agents directly to PostgreSQL, SQLite, and Supabase via standardized Model Context Protocol tools with strict read-only safety gates.",
+      "openPreview60": [
+        "Asking an LLM to generate database queries by pasting schema text into a prompt is slow, error-prone, and rapidly inflates your token consumption. Every schema change requires manual repasting and verification.",
+        "Model Context Protocol (MCP) changes this dynamic completely. By running a local lightweight MCP server that exposes schema introspection and query tools, your agent inspects real database tables on demand.",
+        "Safety is paramount: a properly configured MCP server enforces strict read-only gates for analysis and requires explicit human confirmation flags before executing destructive DDL migrations or data mutations."
+      ],
+      "prompt1": "Configure a local SQLite/PostgreSQL MCP server configuration file mcp-servers.json that exposes schema-inspection and read-only parameterized queries. Enforce a query row limit of 50 records and block DROP, ALTER, and DELETE statements unless an explicit --force-migration flag is provided."
+    },
+    {
+      "slug": "guide-04-builder-critic-qa-loop",
+      "category": "vibecoding",
+      "codeword": "CRITIC",
+      "title": "The 2-Agent Builder-Critic Closed Loop for Zero-Bug Refactoring",
+      "summary": "Implement an automated closed-loop development cycle where one model writes code and an independent model audits regressions before merging.",
+      "openPreview60": [
+        "Single-agent coding workflows suffer from confirmation bias. When the same model that generated a bug is asked whether the code is correct, it routinely overlooks its own logical omissions and assures the user that everything passes.",
+        "Separating the Builder and Critic roles into independent subagents eliminates this blind spot. The Builder is given the task specification and implementation tools, while the Critic receives the original acceptance criteria and automated test runners.",
+        "If the Critic detects any regression, failed test, or contrast violation, it generates a structured failure report with exact line references. The Builder repairs the issue, and the Critic verifies the fix with a hard two-repair ceiling."
+      ],
+      "prompt1": "Create a test evaluation script scripts/run-critic-loop.py that takes an input source file and a test command. Run the Builder agent to implement the requested refactor, then invoke the Critic agent to inspect the git diff against a 15-point acceptance rubric. Emit CRITIC_VERDICT.json with binary pass/fail results."
+    },
+    {
+      "slug": "guide-05-supabase-rls-agent-auth",
+      "category": "vibecoding",
+      "codeword": "SECURITY",
+      "title": "Securing Agent Tool Access with Supabase Row Level Security",
+      "summary": "Implement cryptographic data boundaries ensuring autonomous agents only query and modify records belonging to the active authenticated tenant.",
+      "openPreview60": [
+        "When multi-agent systems interact with production databases, a single prompt injection or logic bug can lead to catastrophic cross-tenant data leaks. Relying solely on the model to remember client ID filters in WHERE clauses is fundamentally unsafe.",
+        "Row Level Security (RLS) in PostgreSQL and Supabase moves authorization enforcement from the application layer down into the database engine itself. Regardless of what query string the agent constructs, the database restricts results to authorized rows.",
+        "By binding the agent execution context to authenticated JWT tokens or scoped service roles, you achieve mathematical certainty that client data remains strictly isolated even during autonomous bulk operations."
+      ],
+      "prompt1": "Write a complete Supabase SQL migration script defining tables for users, projects, and agent_runs. Enable RLS on all tables and create policies allowing users to SELECT and UPDATE only their own records based on auth.uid(). Include a secure service role policy for background worker agents."
+    },
+    {
+      "slug": "guide-06-reels-cliff-hook-formula",
+      "category": "content",
+      "codeword": "HOOKS",
+      "title": "The 1.8-2.4s Cliff Zone: Engineering High-Retention Reels Hooks",
+      "summary": "Master the psychological window where viewers decide whether to swipe away or stay, maximizing algorithmic video reach across Reels and Shorts.",
+      "openPreview60": [
+        "Platform recommendation algorithms evaluate vertical videos primarily on retention through the first 3 seconds. If more than 40% of viewers swipe away during the opening beat, the algorithm immediately throttles wider distribution.",
+        "The critical cliff zone occurs between 1.8 and 2.4 seconds. Viewers process your visual framing in the first 0.4 seconds, evaluate your spoken hook in the next 1.2 seconds, and decide whether to stay by second 2.4.",
+        "To engineer high-retention hooks, you must coordinate three simultaneous signals: a dynamic visual pattern interrupt, a provocative verbal claim that contradicts conventional wisdom, and a high-contrast text overlay."
+      ],
+      "prompt1": "Analyze this video topic: [topic]. Generate 5 high-retention opening hooks engineered for the 1.8-2.4s cliff zone. For each hook, output: 1. Visual action (camera movement/prop), 2. Spoken opening sentence (max 9 words), 3. On-screen text badge, 4. Psychological trigger family."
+    },
+    {
+      "slug": "guide-07-single-viewport-cinema-loop",
+      "category": "content",
+      "codeword": "LOOP",
+      "title": "41-Second Seamless Audio/Video Scriptwriting for Vertical Shorts",
+      "summary": "Write compelling short-form scripts that flow invisibly from the closing sentence back into the opening hook, multiplying viewer replays.",
+      "openPreview60": [
+        "A video that stops cold with a generic 'follow for more' call to action signals to the viewer that the experience is finished. They immediately swipe away, capping your total watch time at 100% or less.",
+        "Seamless loops exploit platform autoplay behavior. By crafting the closing sentence so that it grammatically and logically finishes by launching the opening sentence, viewers frequently watch a full second revolution before realizing the video looped.",
+        "In algorithmic scoring, achieving 130% to 180% average percentage viewed signals extraordinary content resonance, propelling the video onto algorithmic Explore and Discovery pages."
+      ],
+      "prompt1": "Write a 41-second vertical video script about [subject]. Structure the script with a second-by-second pacing table: 0-3s hook, 4-15s context, 16-30s core solution, 31-38s proof, and 39-41s loop bridge that seamlessly finishes the opening sentence."
+    },
+    {
+      "slug": "guide-08-nikolashin-3-object-thumbnails",
+      "category": "content",
+      "codeword": "THUMBNAIL",
+      "title": "The Rule of 3 Objects: Designing CTR-Dominating Video Covers",
+      "summary": "Eliminate visual clutter and craft clear, high-contrast video covers that tell an instant visual story in under 0.3 seconds of user scrolling.",
+      "openPreview60": [
+        "Most YouTube and Reels covers fail because creators attempt to cram entire paragraphs, five graphics, glowing arrows, and complex backgrounds into a tiny mobile thumbnail. The eye cannot parse multiple focal points during rapid browsing.",
+        "The Rule of 3 Objects dictates that every high-performing cover must contain strictly three elements: 1. A human face with clear emotional gaze, 2. A tangible, high-contrast hero object, and 3. An unexpected contextual catalyst.",
+        "By restricting visual complexity to exactly three distinct objects set against a calm, uncluttered background, you maximize instant comprehension, dramatically raising Click-Through Rates (CTR) across recommendation feeds."
+      ],
+      "prompt1": "Take this video title and concept: [insert details]. Design an authoritative cover composition applying the Rule of 3 Objects. Specify: Object 1 (Subject expression and gaze direction), Object 2 (Physical focal item), Object 3 (Visual catalyst/contrast element), background tone, and 3-word title overlay."
+    },
+    {
+      "slug": "guide-09-lepera-diagnostic-carousels",
+      "category": "content",
+      "codeword": "CAROUSEL",
+      "title": "The Diagnostic Mirror: Multi-Slide Carousel Architecture for Instagram",
+      "summary": "Structure educational cream-card carousels that diagnose reader behavioral patterns, driving record-high saves, shares, and inbound inquiries.",
+      "openPreview60": [
+        "Generic tips and motivational quotes no longer generate engagement on social feeds. Modern audiences scroll past generic advice because it offers zero diagnostic self-reflection.",
+        "The Diagnostic Mirror carousel functions like an interactive assessment. By presenting specific behavioral patterns, operational mistakes, or cognitive habits on slides 2 through 6, the reader sees their own lived experience mirrored back to them.",
+        "This recognition triggers intense psychological resonance, prompting the user to save the post as a reference, share it with colleagues, and comment the registered codeword for the underlying remediation checklist."
+      ],
+      "prompt1": "Act as a specialist editor. Design an 8-slide Diagnostic Mirror carousel addressing [target pain point]. Provide: Slide 1 hook headline, Slides 2-6 diagnostic statements with 'Recognize yourself?' subtext, Slide 7 structural diagnosis, Slide 8 codeword call to action."
+    },
+    {
+      "slug": "guide-10-teleprompter-voice-mastery",
+      "category": "content",
+      "codeword": "VOICE",
+      "title": "Natural Camera Delivery & Pleshakov-Kachalin Voice Resonance",
+      "summary": "Overcome robotic teleprompter delivery and develop authoritative, natural chest resonance that commands attention across long-form video.",
+      "openPreview60": [
+        "Reading from a teleprompter often results in a flat, monotone vocal delivery with wandering eye movements that destroy viewer trust. Viewers instantly sense when a speaker is reciting memorized or scrolled words rather than speaking from expertise.",
+        "Pleshakov-Kachalin voice training focuses on breathing and deep chest resonators rather than straining vocal cords in the throat. By grounding your voice in natural diaphragm support, your tone acquires warmth, authority, and acoustic depth.",
+        "Combined with script formatting techniques that break sentences into 4 to 12 word breathing chunks with marked pauses, you achieve effortless camera presence that sounds completely authentic and conversational."
+      ],
+      "prompt1": "Take this raw draft script: [paste script]. Format it into speech-ready teleprompter copy: break into 4-12 word breathing blocks, insert [pause] indicators for emphasis, mark stressed syllables with acute accents, and eliminate tongue-twister consonant clusters."
+    },
+    {
+      "slug": "guide-11-zero-link-codeword-funnel",
+      "category": "funnels",
+      "codeword": "CODEWORD",
+      "title": "Zero-Link Codeword Funnels: Converting Social Traffic via Telegram",
+      "summary": "Stop losing 80% of video reach to link penalties by driving viewers through automated codeword keywords directly into Telegram lead magnets.",
+      "openPreview60": [
+        "Every major social network actively penalizes posts and bios that direct traffic off their platform. Links in captions or comments routinely result in massive algorithmic suppression, slashing potential organic viewership.",
+        "Zero-Link Codeword Funnels circumvent this penalty entirely. Instead of pasting links, your video ends with a single distinct keyword call to action (e.g. 'Comment AGENT below').",
+        "Automated comment monitoring bots detect the trigger word, dispatch an instant personalized DM with a direct deep link to your Telegram bot, and seamlessly onboard the prospect into your qualification funnel."
+      ],
+      "prompt1": "Design a complete Zero-Link Codeword Funnel for an offer priced at [price]. Provide: 1. Video ending CTA script, 2. Comment auto-reply message, 3. Direct Message delivery copy, 4. Telegram bot welcome sequence that delivers the promised lead magnet and offers a tripwire upgrade."
+    },
+    {
+      "slug": "guide-12-micro-funnel-48h-pipeline",
+      "category": "funnels",
+      "codeword": "FUNNEL",
+      "title": "The 48-Hour Conversion Window: From Free Lead Magnet to Paid Tripwire",
+      "summary": "Capitalize on peak prospect attention during the first 48 hours following lead capture, converting cold traffic into paying customers with high-margin tripwires.",
+      "openPreview60": [
+        "Attention decays exponentially online. Within 48 hours of downloading a free guide, prospect open rates drop by over 70%, and the likelihood of converting into a paid customer plummets dramatically.",
+        "High-performance micro-funnels concentrate their commercial monetization within this exact 48-hour window. Immediately upon delivering the free resource, the system presents an irresistible, low-ticket impulse tripwire ($19-$59).",
+        "By solving the immediate next operational bottleneck revealed by the free guide, the tripwire liquidates client acquisition costs and transforms cold followers into verified buyers with stored payment details."
+      ],
+      "prompt1": "Map out a 48-hour automated email/Telegram nurture sequence for converting leads who downloaded [free resource] into buyers of a $19 tripwire. Outline the exact timing, subject line, psychological angle, and urgency trigger for 4 sequential messages across 48 hours."
+    },
+    {
+      "slug": "guide-13-mafia-offer-b2b-blueprint",
+      "category": "funnels",
+      "codeword": "OFFER",
+      "title": "Drafting Unrefusable B2B Proposals with 1/10 Value Guarantee",
+      "summary": "Structure commercial enterprise proposals where the contractual price represents no more than 10% of quantifiable upside, eliminating budget objections.",
+      "openPreview60": [
+        "B2B service providers frequently struggle with lengthy sales cycles and pricing pushback because they sell generic inputs like hours, deliverables, or consulting sessions. Corporate decision-makers do not buy effort; they buy risk mitigation and EBITDA growth.",
+        "The 1/10 Value Rule establishes mathematical asymmetry. If your autonomous agent system saves a client $50,000 in monthly operational labor, pricing your implementation sprint at $5,000 makes the purchase an undeniable financial return.",
+        "By packaging your proposal with an explicit A-to-B operational bridge, verified deployment receipts, and a 100% money-back payback guarantee, you empower your internal champion to pass procurement reviews effortlessly."
+      ],
+      "prompt1": "Act as a B2B deal architect. Take this enterprise automation scenario: [describe business bottleneck and current costs]. Draft an unrefusable 1-page commercial proposal applying the 1/10 Value Guarantee. Include: Current operational bleed, 14-day sprint scope, guaranteed payback period, and transparent 50/50 payment tranches."
+    },
+    {
+      "slug": "guide-14-dual-rail-checkout-flow",
+      "category": "funnels",
+      "codeword": "CHECKOUT",
+      "title": "Dual-Rail Checkout: Combining Bank Cards & Cryptocurrencies",
+      "summary": "Build frictionless dual-rail checkout pages allowing seamless Ruble, Dollar, and Euro card payments alongside global cryptocurrency settlements.",
+      "openPreview60": [
+        "Relying on a single payment processor is an existential vulnerability for digital businesses. Cross-border banking sanctions, account holds, and regional merchant restrictions cause massive checkout abandonment rates.",
+        "A Dual-Rail Checkout architecture solves this by presenting two parallel payment rails inside a unified interface: domestic localized bank card acquisition alongside global digital settlement rails (USDT, TON, USDC).",
+        "The system dynamically detects user geolocation and device locale, displaying local currency prices (RUB, USD, EUR) while ensuring that funds settle securely without intermediate merchant account freezes."
+      ],
+      "prompt1": "Create a unified dual-rail checkout component in clean HTML/Tailwind CSS. Implement seamless toggle tabs between 'Credit/Debit Card (Instant Access)' and 'Cryptocurrency (USDT/TON with 5% Discount)'. Display localized pricing in RUB, USD, and EUR based on user selection, with zero external tracking scripts."
+    },
+    {
+      "slug": "guide-15-recurring-club-retention",
+      "category": "funnels",
+      "codeword": "RECURRING",
+      "title": "Running High-Retention Paid Communities Without Live Calls",
+      "summary": "Architect asynchronous recurring membership models that maintain 90%+ monthly retention through weekly asset drops and automated model studios.",
+      "openPreview60": [
+        "Most membership communities collapse within four months because founders trap themselves in exhausting weekly Zoom calls and daily community management. When the founder burns out, retention plummets and churn spikes above 20%.",
+        "The Asynchronous Club Architecture replaces live call obligations with tangible digital utility. Members subscribe for access to hosted model studios, weekly ready-to-run prompt drops, and direct asynchronous code teardowns.",
+        "By delivering predictable weekly drops (Friday teardowns, Monday template updates) and providing compute token allowances, members integrate the membership into their daily workflow, creating rock-solid 90%+ retention."
+      ],
+      "prompt1": "Design an asynchronous membership club architecture for [industry/topic] priced at $39-$49/mo. Outline: 1. Core digital utility stack (tools/tokens/vault), 2. Weekly publishing cadence (Monday release, Friday teardown), 3. Churn defense onboarding sequence that gets members to deploy their first workflow within 48 hours."
+    },
+    {
+      "slug": "guide-16-gpt-image-26-photorealism",
+      "category": "visuals",
+      "codeword": "PHOTOREAL",
+      "title": "Authentic Skin Texture & Studio Lighting in GPT Image 2.6",
+      "summary": "Eliminate plastic AI skin, waxy textures, and distorted lighting by calibrating optical Kelvin temperatures and physical camera sensors.",
+      "openPreview60": [
+        "The defining tell of amateur AI imagery is oversaturated, airbrushed plastic skin with uniform specular reflections. Default prompts produce subjects that look like CGI mannequins rather than authentic human beings.",
+        "GPT Image 2.6 supports advanced optical parameter parsing. By explicitly specifying color temperatures in Kelvin (e.g. 5600K daylight key with 3200K warm rim light) and naming physical sensor profiles (e.g. Apple iPhone 16 Pro CMOS or Hasselblad H6D), the model renders authentic micro-contrast.",
+        "Pairing calibrated optical parameters with negative constraints that ban post-processed airbrushing and porcelain doll smoothing ensures organic skin pores, natural vellus hair, and realistic subsurface scattering."
+      ],
+      "prompt1": "Generate a studio portrait using GPT Image 2.6. Subject: [describe subject and wardrobe]. Optical Setup: 54-degree diagonal FOV, key light 5600K softbox at 45 degrees, subtle 3200K warm tungsten rim light, physical CMOS sensor grain. Negative rules: ban plastic skin, airbrushing, porcelain smoothing, and excessive HDR glow."
+    },
+    {
+      "slug": "guide-17-faceid-character-consistency",
+      "category": "visuals",
+      "codeword": "FACEID",
+      "title": "Generating Stable Multi-Angle Characters Across 100+ Scenes",
+      "summary": "Lock facial geometry, wardrobe details, and physical traits to produce episodic graphic stories and commercial campaigns without character drift.",
+      "openPreview60": [
+        "The biggest barrier to creating episodic visual storytelling with AI has always been character drift. Even minor prompt changes cause models to regenerate a completely different face, destroying narrative continuity across slides or video scenes.",
+        "FaceID character consistency overcomes this by generating a 15-panel reference sheet first. By capturing the character across 5 facial angles, 3 lighting conditions, and 3 emotional expressions on an anchor grid, you establish an authoritative visual identity.",
+        "Using this multi-angle master sheet as an image reference alongside strict semantic descriptors (jawline structure, eye shape, signature hairstyle), you can place the character into diverse environments while maintaining 100% recognition."
+      ],
+      "prompt1": "Generate a 15-panel master character sheet in a 3-row grid against a neutral 18% gray studio background. Subject: [describe character age, ethnicity, hair, distinct features]. Row 1: Frontal, 45-degree left, 45-degree right, full profile, back of head. Row 2: Neutral, laughing, serious, surprised, focused expressions. Row 3: Close-up eye detail, hands, full-body silhouette."
+    },
+    {
+      "slug": "guide-18-omni-flash-video-choreography",
+      "category": "visuals",
+      "codeword": "MOTION",
+      "title": "10-Second Cinematic Motion Loops in Google Flow Omni 1.2 Flash",
+      "summary": "Direct fluid, physically consistent 10-second cinematic video scenes in Google Flow Omni with exact camera tracking and zero artifact morphing.",
+      "openPreview60": [
+        "Generative AI video models frequently suffer from rubbery limbs, morphing objects, and uncontrolled camera wobbles. When prompts simply describe general actions, models invent unstable physical transitions between frames.",
+        "Google Flow Omni 1.2 Flash introduces rigorous keyframe and camera velocity controls. By pinning the start frame, specifying camera trajectories in degrees and millimeters, and enforcing a constant speed curve, you eliminate morphing artifacts.",
+        "For commercial product spots, the 10-second duration provides the optimal canvas: 2 seconds of smooth establishing approach, 6 seconds of detailed rotational showcase, and 2 seconds of clean exit settle."
+      ],
+      "prompt1": "Direct a 10-second vertical 9:16 commercial video scene in Google Flow Omni 1.2 Flash. Initial Keyframe: [describe starting image]. Camera Choreography: Slow orbital clockwise dolly at 15 degrees per second, maintaining tight focus on [product]. Lighting: Directional rim light sweep from left to right across 10 seconds. Motion: Zero subject deformation, constant linear camera velocity."
+    },
+    {
+      "slug": "guide-19-talking-avatar-voice-sync",
+      "category": "visuals",
+      "codeword": "AVATAR",
+      "title": "Lip-Sync Precision: Creating Lifelike AI Presenters with Neural Voice",
+      "summary": "Build hyper-realistic talking avatar pipelines with frame-accurate phoneme synchronization, natural eye blinks, and authentic micro-gestures.",
+      "openPreview60": [
+        "Early AI avatars suffered from the robotic 'puppet mouth' syndrome: the lower jaw moved up and down while the rest of the face remained frozen in an unnatural, lifeless stare. Viewers detect this dissonance immediately.",
+        "Modern lip-sync engines map acoustic phonemes to multi-dimensional facial landmarks. Natural delivery requires coordinating lip movement with subtle eyebrow raises, natural head tilts on stressed words, and periodic micro-blinks.",
+        "By pairing a high-resolution base video plate with high-fidelity neural voice synthesis containing authentic breath marks, you produce educational presenters that convey deep authority and engagement."
+      ],
+      "prompt1": "Configure a pipeline to generate an educational video featuring an AI presenter. Input audio: [audio script path]. Video plate specifications: 1080x1920 vertical framing, chest-up medium close-up, neutral studio background. Lip-sync parameters: enforce phoneme blending, 22 blinks/minute average rate, and natural head nods on punctuation pauses."
+    },
+    {
+      "slug": "guide-20-apple-liquid-glass-ui",
+      "category": "visuals",
+      "codeword": "GLASS",
+      "title": "Rendering Optical Refraction & Glassmorphism in Modern Web UI",
+      "summary": "Implement tactile, physical liquid glass panels in CSS and SVG featuring chromatic dispersion, specular edge highlights, and zero performance lag.",
+      "openPreview60": [
+        "Most web implementations of 'glassmorphism' fail because developers simply apply a blurry semi-transparent white background (`background: rgba(255,255,255,0.1); backdrop-filter: blur(10px);`). This creates dull gray mud rather than luminous glass.",
+        "True physical glass exhibits optical refraction, surface specular rims, and subtle chromatic aberration along its beveled borders. In CSS, this requires combining an SVG displacement map with an inner rim highlight (`box-shadow: inset 0 1.5px 0 rgba(255,255,255,0.4)`).",
+        "When paired with a cursor-reactive spotlight variable and concentric corner radii, liquid glass surfaces create an unmistakable feeling of premium Apple-grade hardware craft."
+      ],
+      "prompt1": "Write the CSS and SVG code for an Apple-grade Liquid Glass card. Include: 1. Inline SVG feDisplacementMap filter for optical refraction, 2. CSS backdrop-filter blur, 3. Inset specular rim highlight, 4. Dark-mode anti-OLED-smear surface backing, 5. Concentric border radius token formula."
+    },
+    {
+      "slug": "guide-21-agents-md-system-contract",
+      "category": "agents",
+      "codeword": "AGENTS",
+      "title": "Writing Deterministic Project Root Contracts in AGENTS.md",
+      "summary": "Lock repository boundaries, permissible CLI commands, and automated test gates into a single authoritative root contract that guides every autonomous model.",
+      "openPreview60": [
+        "When autonomous agents enter a repository without a system contract, they invent their own interpretations of coding style, import unvetted third-party packages, and create unwanted helper files scattered across folders.",
+        "AGENTS.md acts as the constitution of your codebase. Placed in the project root, it defines non-negotiable architectural invariants: permitted libraries, prohibited patterns, language restrictions, and required verification receipts.",
+        "Because leading autonomous runners ingest AGENTS.md at session initialization, your project maintains 100% architectural integrity regardless of which developer or model executes the task."
+      ],
+      "prompt1": "Generate a production AGENTS.md specification file for a project utilizing [tech stack]. Structure 5 mandatory sections: 1. Specialist Roles & Mission, 2. Non-Negotiable Architectural Invariants, 3. Forbidden Boundaries & Stop Rules, 4. Permitted CLI Utilities, 5. Verification Receipt Schema."
+    },
+    {
+      "slug": "guide-22-idempotent-morning-brief",
+      "category": "agents",
+      "codeword": "BRIEF",
+      "title": "The 08:30 Automated Fleet Intelligence Briefing Protocol",
+      "summary": "Deploy idempotent cron agents that aggregate system telemetry, sales funnels, and pending pull requests into a pristine 08:30 morning executive brief.",
+      "openPreview60": [
+        "Founders and team leads waste the first 90 minutes of every morning checking 7 different dashboards: Stripe payments, GitHub commits, database health, customer support tickets, and team chats. This fragmented routine destroys creative morning focus.",
+        "An automated morning briefing agent consolidates all operational telemetry at 08:30 sharp. Running on an idempotent schedule, the agent queries active databases, computes daily delta percentages, and flags items requiring human intervention.",
+        "Delivered directly to a private Telegram topic or Slack channel, the brief presents green status indicators, highlights anomalies, and includes one-click action buttons to resolve pending issues immediately."
+      ],
+      "prompt1": "Create a Python automation script scripts/morning-brief.py that runs daily at 08:30. The script must: 1. Query Supabase for new orders and calculate 24h revenue delta, 2. Check git log for merged pull requests, 3. Inspect server disk and memory usage, 4. Format a concise Markdown message and dispatch it to a designated Telegram chat ID."
+    },
+    {
+      "slug": "guide-23-modernbert-hybrid-rag",
+      "category": "agents",
+      "codeword": "RAG",
+      "title": "Combining FTS5 Fulltext & ModernBERT Semantic Search for Knowledge Bases",
+      "summary": "Build ultra-accurate private knowledge engines that fuse exact keyword lexical matching with modern neural embedding rerankers for zero-hallucination retrieval.",
+      "openPreview60": [
+        "Standard vector-only RAG pipelines fail catastrophically on exact technical terms, SKU identifiers, and error codes. Because embedding models map concepts into broad semantic spaces, a query for an exact model number frequently retrieves unrelated documentation.",
+        "Hybrid RAG combines the strengths of classical lexical search and neural embeddings. An initial fast pass using SQLite FTS5 (BM25) retrieves exact text matches, while dense vector search retrieves conceptual synonyms.",
+        "A ModernBERT cross-encoder then reranks the combined candidate list, scoring true semantic relevance. This multi-stage pipeline guarantees that the LLM prompt receives exact factual evidence, completely eliminating hallucinations."
+      ],
+      "prompt1": "Implement a hybrid search function hybrid_search(query, top_k=5) in Python. Step 1: Run SQLite FTS5 match query to retrieve top 20 BM25 keyword hits. Step 2: Run cosine similarity search over vector embeddings for top 20 semantic hits. Step 3: Merge and score candidates using Reciprocal Rank Fusion (RRF) and return the top 5 reranked documents."
+    },
+    {
+      "slug": "guide-24-sovereign-multi-agent-swarm",
+      "category": "agents",
+      "codeword": "SWARM",
+      "title": "Architecting Autonomous Swarms with Strict Task Handshakes",
+      "summary": "Orchestrate multi-role autonomous agent swarms that collaborate across research, engineering, and quality assurance without human intervention or infinite loops.",
+      "openPreview60": [
+        "Attempting to solve complex software engineering tasks with a single giant monolithic prompt inevitably leads to hallucination, context saturation, and uncoordinated modifications. No single model instance can excel simultaneously as architect, coder, and quality tester.",
+        "Sovereign multi-agent swarms structure specialized instances into a clear command hierarchy. A central conductor decomposes high-level intent into atomic work tickets, dispatching them to role-isolated subagents with bounded permissions.",
+        "Strict task handshakes govern every inter-agent transition: subagents cannot proceed without verified input pre-conditions, and conductors reject task completions that lack deterministic verification receipts."
+      ],
+      "prompt1": "Design an autonomous 3-agent orchestration state machine in Python. Agent 1 (Scout): performs web and filesystem research, emitting RESEARCH_DOSSIER.json. Agent 2 (Builder): implements requested code changes based strictly on the dossier. Agent 3 (Critic): runs automated tests and validates results. Include hard loop caps to prevent infinite ping-pong cycles."
+    }
+  ],
+  "glossary": [
+    {
+      "id": "agents-md",
+      "term": "AGENTS.md",
+      "name": "AGENTS.md System Contract",
+      "explanation": "A root repository file defining autonomous agent roles, tool permissions, boundary limits, and task handoffs. It ensures multi-agent swarms operate with deterministic authority rather than guessing project rules.",
+      "practicalRule": "Place an AGENTS.md file in every project root to eliminate role drift and keep agents bound to verified paths."
+    },
+    {
+      "id": "mcp-protocol",
+      "term": "MCP (Model Context Protocol)",
+      "name": "MCP (Model Context Protocol)",
+      "explanation": "An open standard connecting AI models to local files, databases, developer tools, and external APIs through standardized client-server interfaces. It replaces fragile custom API scripts with secure, tool-agnostic capabilities.",
+      "practicalRule": "Expose databases and command-line utilities via local MCP servers instead of writing custom API bridges."
+    },
+    {
+      "id": "context-window-rot",
+      "term": "Context Window & Token Rot",
+      "name": "Context Window & Token Rot",
+      "explanation": "The finite memory buffer of an LLM where earlier instructions gradually lose attention weight as session history expands. As token counts approach window limits, reasoning quality degrades and subtle bugs emerge.",
+      "practicalRule": "Keep active chat sessions under 25 turns and summarize progress into disk handoffs before opening a clean session."
+    },
+    {
+      "id": "vibe-coding",
+      "term": "Vibe-Coding",
+      "name": "Vibe-Coding",
+      "explanation": "An engineering paradigm where developers guide AI models using high-level architectural specifications rather than writing syntax manually. The human acts as chief architect and critic while the model handles implementation details.",
+      "practicalRule": "Direct the build by reviewing test results and visual output instead of micromanaging syntax lines."
+    },
+    {
+      "id": "zero-link-codeword-funnel",
+      "term": "Zero-Link Codeword Funnel",
+      "name": "Zero-Link Codeword Funnel",
+      "explanation": "A lead generation mechanism where social video viewers comment a single keyword to receive materials via direct message or Telegram bot. It bypasses algorithmic link penalties on social platforms while capturing qualified inbound leads.",
+      "practicalRule": "End social videos with a single uppercase codeword call to action instead of bio links to maximize organic reach."
+    },
+    {
+      "id": "gpt-image-26-faceid",
+      "term": "GPT Image 2.6 FaceID",
+      "name": "GPT Image 2.6 FaceID",
+      "explanation": "A prompt engineering technique using calibrated camera angles and multi-view sheets to generate identical human characters across hundreds of scenes. It eliminates facial drift and uncanny valley distortions in AI video and imagery.",
+      "practicalRule": "Lock identity with a 15-panel master reference sheet and fixed lighting Kelvin before rendering episodic scenes."
+    },
+    {
+      "id": "builder-critic-loop",
+      "term": "Builder-Critic Loop",
+      "name": "Builder-Critic Loop",
+      "explanation": "A dual-agent architecture where one specialized model generates code or content while an independent critic model evaluates it against a strict rubric. The loop automatically reruns repairs until all acceptance criteria achieve verified passes.",
+      "practicalRule": "Never let the generating agent grade its own work; always assign an independent critic before marking tasks complete."
+    },
+    {
+      "id": "rag-architecture",
+      "term": "RAG (Retrieval-Augmented Generation)",
+      "name": "RAG (Retrieval-Augmented Generation)",
+      "explanation": "A knowledge architecture that searches curated company documents and injects exact factual context into LLM prompts before generation. It grounds agent responses in verified business facts and eliminates hallucinations.",
+      "practicalRule": "Combine fast BM25 or SQLite FTS5 lexical search with semantic dense embeddings to retrieve exact source quotes."
+    },
+    {
+      "id": "soulbound-badge-tep85",
+      "term": "Soulbound Badge (TEP-85)",
+      "name": "Soulbound Badge (TEP-85)",
+      "explanation": "A non-transferable cryptographic credential permanently bound to a builder address representing completed coursework or verified engineering achievements. It serves as public proof of knowledge without speculative secondary trading.",
+      "practicalRule": "Issue verifiable completion badges on-chain upon passing automated testing suites to validate real student skill."
+    },
+    {
+      "id": "exhverse-3d",
+      "term": "ExhVerse 3D",
+      "name": "ExhVerse 3D",
+      "explanation": "An interactive browser-based 3D gallery environment rendering low-poly trophies, digital awards, and architectural dioramas in real-time. It operates with zero heavy software installations directly across mobile and desktop browsers.",
+      "practicalRule": "Keep 3D props strictly under 10,000 triangles and optimize PBR textures to load smoothly on mobile hardware."
+    },
+    {
+      "id": "tz-md-spec",
+      "term": "tz.md (Technical Specification Contract)",
+      "name": "tz.md (Technical Specification Contract)",
+      "explanation": "A standardized technical brief outlining exact project scope, user stories, acceptance criteria, and non-goals before coding begins. It acts as an immutable anchor that prevents scope creep and agent hallucination.",
+      "practicalRule": "Freeze the problem, constraints, and non-goals in tz.md before allowing agents to generate application code."
+    },
+    {
+      "id": "zero-slop-markdown",
+      "term": "Zero-Slop Markdown Standard",
+      "name": "Zero-Slop Markdown Standard",
+      "explanation": "A writing regulation that purges AI conversational filler, repetitive bullet points, fake executive summaries, and ungrounded buzzwords. It produces dense, authoritative documentation containing strictly actionable technical instructions.",
+      "practicalRule": "Eliminate conversational pleasantries and vague adjectives, replacing them with numbers, code, and exact steps."
+    },
+    {
+      "id": "idempotent-morning-brief",
+      "term": "Idempotent Morning Brief",
+      "name": "Idempotent Morning Brief",
+      "explanation": "An automated daily cron workflow that aggregates system metrics, client pipelines, commit logs, and pending tasks into a single message. Running the workflow multiple times produces the exact same clean digest without duplicated notifications.",
+      "practicalRule": "Schedule daily status aggregation jobs to run idempotently so reruns never flood team communication channels."
+    },
+    {
+      "id": "subagent-swarm",
+      "term": "Subagent Swarm",
+      "name": "Subagent Swarm",
+      "explanation": "A coordinated network of focused, single-purpose AI instances executing delegated tasks concurrently under a central conductor. Each subagent operates within strict role boundaries and returns verified receipts to the root coordinator.",
+      "practicalRule": "Break complex multi-step jobs into independent scoped tickets dispatched to role-isolated subagents."
+    },
+    {
+      "id": "modernbert-reranking",
+      "term": "ModernBERT Reranking",
+      "name": "ModernBERT Reranking",
+      "explanation": "A modern neural reranker that scores candidate text passages by semantic relevance to a query before prompt injection. It filters out irrelevant search noise and guarantees that top-ranked context directly answers the user intent.",
+      "practicalRule": "Apply a fast neural reranking pass over initial database search hits to keep prompt token consumption minimal."
+    },
+    {
+      "id": "kisa-4-coordinate-law",
+      "term": "Kisa 4-Coordinate Law",
+      "name": "Kisa 4-Coordinate Law",
+      "explanation": "A specification framework requiring every engineering prompt to define Persona, Objective, Constraints, and Verification Output. It locks the operational coordinate space so models cannot deviate into generic conversational responses.",
+      "practicalRule": "Never prompt an agent without all four coordinates explicitly declared in the initial task framing."
+    },
+    {
+      "id": "liquid-glass-optics",
+      "term": "Liquid Glass Optics",
+      "name": "Liquid Glass Optics",
+      "explanation": "A modern visual styling technique simulating physical glass refraction, chromatic dispersion, and subtle specular lighting in CSS and SVG. It creates premium, tactile interface depth without heavy WebGL rendering dependencies.",
+      "practicalRule": "Implement glassmorphism using CSS backdrop-filter blur and SVG displacement maps with graceful fallbacks."
+    },
+    {
+      "id": "prompt-part-stepper",
+      "term": "Prompt Part Stepper",
+      "name": "Prompt Part Stepper",
+      "explanation": "An interactive training interface that guides users through constructing each essential block of an engineering prompt sequentially. It visualizes the quality delta between naive single-sentence requests and professional specifications.",
+      "practicalRule": "Assemble prompts block by block through structured UI controls to guarantee all negative rules are included."
+    },
+    {
+      "id": "teobench-eval-gate",
+      "term": "TeoBench Evaluation Gate",
+      "name": "TeoBench Evaluation Gate",
+      "explanation": "An automated test runner that verifies completed student projects or agent code against unit tests, static linting, and design constraints. It provides objective pass or fail scores without human subjective grading bias.",
+      "practicalRule": "Gate course advancement and certificate issuance on automated test passes executed in isolated sandboxes."
+    },
+    {
+      "id": "diagonal-fov-lock",
+      "term": "Diagonal FOV Degree Lock",
+      "name": "Diagonal FOV Degree Lock",
+      "explanation": "The practice of specifying camera lens geometry in exact field-of-view degrees rather than focal length millimeters in visual generation prompts. It eliminates perspective ambiguity across different virtual camera sensor sizes.",
+      "practicalRule": "Use 84 degrees for dynamic product scenes and 28 degrees for close-up portraits to ensure stable framing."
+    },
+    {
+      "id": "pbr-shading-tokens",
+      "term": "PBR Shading Tokens",
+      "name": "PBR Shading Tokens",
+      "explanation": "Standardized material properties (base color, roughness, metallic, normal, IOR, transmission) controlling realistic light interactions on 3D surfaces. They ensure 3D assets render consistently across web viewers, game engines, and DCC tools.",
+      "practicalRule": "Define 3D materials with numerical PBR token ranges to avoid unrealistic plastic reflections in WebGL."
+    },
+    {
+      "id": "mafia-offer-architecture",
+      "term": "Mafia Offer Architecture",
+      "name": "Mafia Offer Architecture",
+      "explanation": "A commercial proposal so clearly advantageous and derisked that prospective clients cannot refuse it in good faith. It combines an undeniable value bridge, transparent pricing, and concrete performance guarantees.",
+      "practicalRule": "Price your offer at no more than 10% of the quantifiable financial return or labor savings delivered."
+    },
+    {
+      "id": "single-viewport-cinema-loop",
+      "term": "Single-Viewport Cinema Loop",
+      "name": "Single-Viewport Cinema Loop",
+      "explanation": "A vertical video format designed to loop continuously with identical start and end audio-visual frames. It captures viewer engagement across multiple cycles, dramatically boosting algorithmic platform retention scores.",
+      "practicalRule": "Write script endings that grammatically connect into the opening sentence to achieve invisible seamless loopback."
+    },
+    {
+      "id": "concentric-radius-rule",
+      "term": "Concentric Border Radius Rule",
+      "name": "Concentric Border Radius Rule",
+      "explanation": "The design principle where nested UI elements maintain proportional corner radii calculated by subtracting container padding from outer radius. It creates harmonious, natural visual flow across cards, dialogs, and nested buttons.",
+      "practicalRule": "Set inner element corner radius equal to outer radius minus container padding to prevent visual discordance."
+    },
+    {
+      "id": "anti-oled-smear-ladder",
+      "term": "Anti-OLED-Smear Surface Ladder",
+      "name": "Anti-OLED-Smear Surface Ladder",
+      "explanation": "A dark-mode color token hierarchy using deep dark grays rather than pure black to prevent pixel-switching response blur on OLED displays. It maintains crisp contrast and sharp readability during fast mobile scrolling.",
+      "practicalRule": "Use near-black base canvas tones with staggered lightness steps rather than pure black backgrounds."
+    },
+    {
+      "id": "token-ebitda-payback",
+      "term": "Token-to-EBITDA Payback Ratio",
+      "name": "Token-to-EBITDA Payback Ratio",
+      "explanation": "A financial metric comparing the marginal expense of model API tokens against the direct labor cost savings and revenue generated by an automated agent. It demonstrates clear commercial ROI to corporate enterprise executives.",
+      "practicalRule": "Calculate and present the payback timeline in months when pitching automated agent deployments to B2B clients."
+    },
+    {
+      "id": "deterministic-cli-runner",
+      "term": "Deterministic CLI Runner",
+      "name": "Deterministic CLI Runner",
+      "explanation": "A command-line automation harness that executes scripts with reproducible parameters, verified exit codes, and structured JSON outputs. It avoids unstable GUI dependencies and enables reliable continuous integration testing.",
+      "practicalRule": "Wrap multi-step agent actions into deterministic shell scripts that return verifiable hashes and exit codes."
+    },
+    {
+      "id": "dual-rail-checkout",
+      "term": "Dual-Rail Payment Checkout",
+      "name": "Dual-Rail Payment Checkout",
+      "explanation": "A payment architecture offering both domestic localized bank card rails and borderless digital cryptocurrency settlements in one unified checkout. It ensures international accessibility while accommodating regional banking requirements.",
+      "practicalRule": "Provide both localized national card processing and global cryptocurrency rails to prevent checkout abandonment."
+    }
+  ],
+  "consultants": [
+    {
+      "id": "colibri",
+      "command": "/colibri",
+      "title": "Chief System Architect",
+      "description": "Deconstructs business problems into clean 90/10 MVP scopes, architecture blueprints, and strict tz.md contracts.",
+      "specialization": "System triage, specification authority, model routing, and AGENTS.md boundaries.",
+      "quickStartChips": [
+        {
+          "id": "chip-colibri-1",
+          "label": "Deconstruct MVP 90/10",
+          "prompt": "Act as /colibri. Take this product concept: [paste idea]. Identify the single core loop that delivers 90% of user value with 10% of engineering effort. Output a strict Non-Goals list and an MVP scope specification."
+        },
+        {
+          "id": "chip-colibri-2",
+          "label": "Draft tz.md Contract",
+          "prompt": "Act as /colibri. Generate an immutable tz.md specification for building [feature description]. Include Problem, Desired Outcome, Technical Constraints, Negative Bans, and Verification Criteria."
+        },
+        {
+          "id": "chip-colibri-3",
+          "label": "Audit Agent Boundaries",
+          "prompt": "Act as /colibri. Review this project description: [paste details]. Define the AGENTS.md roles, exact tool access permissions, and handoff protocols to prevent subagent hallucination and file overwrite conflicts."
+        }
+      ],
+      "outputBlueprint": "Structured Markdown with 5 sections: 1. Core Problem & Value Hypothesis, 2. Strict In-Scope vs Non-Goals, 3. Architecture & Data Model, 4. Step-by-Step Execution Sequence, 5. Binary Verification Checklist."
+    },
+    {
+      "id": "biz",
+      "command": "/biz",
+      "title": "Unit Economics & Offer Strategist",
+      "description": "Calculates granular CAC/LTV, subscription vs token API margins, and B2B pricing ladders for high-profit solopreneurs.",
+      "specialization": "Financial modeling, 1/10 value pricing, recurring club economics, and enterprise payback ratio.",
+      "quickStartChips": [
+        {
+          "id": "chip-biz-1",
+          "label": "Model Agency Economics",
+          "prompt": "Act as /biz. Model the monthly unit economics for an AI automation service charging [price] per sprint. Calculate CAC, token costs, gross margin floor (must be >=80%), and monthly capacity for a solo founder."
+        },
+        {
+          "id": "chip-biz-2",
+          "label": "Sub vs API Payback",
+          "prompt": "Act as /biz. Compare paying $20/mo flat consumer AI subscriptions against direct pay-as-you-go model APIs for a team of [number] members performing [workload]. Output the breakeven crossover point and annual savings."
+        },
+        {
+          "id": "chip-biz-3",
+          "label": "Design 3-Tier Ladder",
+          "prompt": "Act as /biz. Design a 3-tier product and pricing ladder for [business domain]. Include an impulse entry tripwire ($19-$59), a core implementation offer ($350-$990), and a high-ticket enterprise sprint ($2,500+)."
+        }
+      ],
+      "outputBlueprint": "Structured table of financial variables: Price, Volume, Variable Costs (API/Hosting), Gross Margin %, Breakeven Timeline in Months, and Strategic Sensitivity Analysis."
+    },
+    {
+      "id": "content",
+      "command": "/content",
+      "title": "Viral Reels & 41s Loop Scriptwriter",
+      "description": "Authors high-retention vertical video scripts featuring 1.8-2.4s cliff zone hooks and seamless audio-visual loopbacks.",
+      "specialization": "Short-form retention engineering, 3-object thumbnail framing, psychological diagnostic carousels, and teleprompter cadence.",
+      "quickStartChips": [
+        {
+          "id": "chip-content-1",
+          "label": "41s Seamless Cinema Loop",
+          "prompt": "Act as /content. Write a 41-second vertical script about [topic]. Enforce a 1.8s visual pattern interrupt hook, a core insight twist at 20s, and an exact closing phrase that loops seamlessly into sentence one."
+        },
+        {
+          "id": "chip-content-2",
+          "label": "5 Cliff Zone Openers",
+          "prompt": "Act as /content. Provide 5 distinct opening hooks for a video addressing [audience problem]. Use psychological trigger families: Counter-Intuitive Truth, Immediate Loss Aversion, and Demonstrable Micro-Proof."
+        },
+        {
+          "id": "chip-content-3",
+          "label": "Diagnostic Carousel Deck",
+          "prompt": "Act as /content. Structure an 8-slide educational carousel diagnosing [symptom/mistake]. Slide 1: High-contrast title card. Slides 2-6: Progressive self-assessment. Slide 7: The structural solution. Slide 8: Codeword CTA."
+        }
+      ],
+      "outputBlueprint": "Timeline breakdown table: Timecode (s), Visual Framing & Camera Direction, Spoken Script Words, On-Screen Typography Overlay, and Audio/SFX Cue."
+    },
+    {
+      "id": "pipelines",
+      "command": "/pipelines",
+      "title": "Zero-Code Automation Engineer",
+      "description": "Architects resilient webhook pipelines, n8n workflows, and Supabase RLS architectures with automated error fallbacks.",
+      "specialization": "Asynchronous event queues, Telegram bot handlers, database trigger security, and idempotent scheduled workers.",
+      "quickStartChips": [
+        {
+          "id": "chip-pipelines-1",
+          "label": "Codeword Telegram Bot Flow",
+          "prompt": "Act as /pipelines. Design an n8n webhook flow that receives inbound Telegram messages, checks for registered codewords, logs the lead in Supabase, and dispatches the exact PDF resource with a one-time link."
+        },
+        {
+          "id": "chip-pipelines-2",
+          "label": "Secure Supabase RLS Schema",
+          "prompt": "Act as /pipelines. Provide the SQL schema and Row Level Security (RLS) policies for a multi-tenant client portal where users can read their purchased resources but agents only have scoped read-write access via service keys."
+        },
+        {
+          "id": "chip-pipelines-3",
+          "label": "Idempotent Cron Digest",
+          "prompt": "Act as /pipelines. Architect an idempotent daily summary script that queries active database tables at 08:30, aggregates KPI deltas, formats a Telegram digest, and records execution hashes to prevent duplicate runs."
+        }
+      ],
+      "outputBlueprint": "Flow Architecture Specification: Trigger Node Definition, Authentication & Environmental Variables, Data Transformation Schema (JSON), and Failure & Retry Policy."
+    },
+    {
+      "id": "prompts",
+      "command": "/prompts",
+      "title": "Prompt Compiler & Anti-Slop Critic",
+      "description": "Transforms conversational text requests into deterministic 6-block specifications while purging AI cliches and buzzwords.",
+      "specialization": "Structural prompt compilation, negative constraint enforcement, visual optics parameters, and anti-hallucination guardrails.",
+      "quickStartChips": [
+        {
+          "id": "chip-prompts-1",
+          "label": "Compile 6-Block Spec",
+          "prompt": "Act as /prompts. Take this raw prompt draft: [paste draft]. Restructure it into the canonical 6-block format: 1. Role, 2. Objective, 3. Context & Production Stakes, 4. Constraints, 5. Negative Rules, 6. Output Schema."
+        },
+        {
+          "id": "chip-prompts-2",
+          "label": "Anti-Slop Content Polish",
+          "prompt": "Act as /prompts. Audit the following copy: [paste text]. Strip all marketing buzzwords (unleash, streamline, seamless, game-changing) and robotic AI staircase formatting. Replace abstractions with verifiable facts and metrics."
+        },
+        {
+          "id": "chip-prompts-3",
+          "label": "Calibrate 5-Axis Optics",
+          "prompt": "Act as /prompts. Compile an image generation prompt for GPT Image 2.6 depicting [subject]. Calibrate all 5 axes: Diagonal FOV (degrees), Kelvin Lighting (3200K-5600K), Medium & Sensor, Spatial Staging, and PBR Material Textures."
+        }
+      ],
+      "outputBlueprint": "Two-Column Audit: Left Column lists detected prompt defects and slop markers; Right Column delivers the compiled, ready-to-run 6-block specification with zero conversational filler."
+    },
+    {
+      "id": "offer",
+      "command": "/offer",
+      "title": "Mafia Offer & B2B Proposal Builder",
+      "description": "Structures irresistible commercial proposals, comprehensive risk reversals, and high-conversion B2B service packages.",
+      "specialization": "Value equation engineering, point A to point B transformation mapping, guarantee structuring, and B2B procurement clarity.",
+      "quickStartChips": [
+        {
+          "id": "chip-offer-1",
+          "label": "1/10 Value Mafia Offer",
+          "prompt": "Act as /offer. Take this business service: [describe service]. Formulate a mafia offer where the price is strictly <= 10% of quantifiable upside. Articulate the Dream Outcome, Perceived Likelihood of Achievement, and Time Delay."
+        },
+        {
+          "id": "chip-offer-2",
+          "label": "B2B Sprint Statement of Work",
+          "prompt": "Act as /offer. Draft a 14-day B2B Sprint Statement of Work for deploying [agent workflow]. Structure milestone tranches: 50% Day-1 deposit, clear technical acceptance criteria, and guaranteed performance deliverables."
+        },
+        {
+          "id": "chip-offer-3",
+          "label": "100% Risk Reversal Guarantee",
+          "prompt": "Act as /offer. Engineer an unconditional, mathematically sound risk reversal guarantee for selling a high-ticket [service/product] priced at [amount]. Eliminate client fear while protecting the provider from bad-faith actors."
+        }
+      ],
+      "outputBlueprint": "Commercial Proposal Blueprint: Hook Title, Pain Point Diagnostic, A-to-B Transformation Bridge, Deliverables Breakdown, Transparent Pricing, and Risk-Reversal Guarantee Statement."
+    }
+  ],
+  "trophies": [
+    {
+      "id": "trophy-level-0-graphite-coin",
+      "title": "Graphite Sketch Hummingbird Coin",
+      "criterion": "Complete Chapter 01 reading and execute 1 interactive simulator session."
+    },
+    {
+      "id": "trophy-level-1-bronze-origami",
+      "title": "Brushed Bronze Origami Hummingbird Core",
+      "criterion": "Complete the 3-Evening Concentrate and generate a verified asset using GPT Image 2.6."
+    },
+    {
+      "id": "trophy-level-2-titanium-seal",
+      "title": "Anodized Titanium & Terracotta Solopreneur Seal",
+      "criterion": "Deploy a validated AGENTS.md contract and configure an active webhook pipeline."
+    },
+    {
+      "id": "trophy-level-3-obsidian-totem",
+      "title": "Obsidian & Liquid Glass Architect Totem",
+      "criterion": "Pass all 12 modules and achieve 100% test score on the TeoBench automated evaluation suite."
+    },
+    {
+      "id": "trophy-level-4-mechanical-medallion",
+      "title": "Sovereign Mechanical Hummingbird Medallion",
+      "criterion": "Ship all 18 modules, deploy an autonomous agency swarm, and complete verified client delivery."
+    }
+  ],
+  "geoPricing": {
+    "free": {
+      "RUB": {
+        "amount": 0,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "0 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 0,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$0",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 0,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "0 \u20ac",
+        "period": ""
+      }
+    },
+    "concentrate": {
+      "RUB": {
+        "amount": 990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "990 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 19,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$19",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 19,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "19 \u20ac",
+        "period": ""
+      }
+    },
+    "kiosk": {
+      "RUB": {
+        "amount": 4990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "4 990 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 59,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$59",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 59,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "59 \u20ac",
+        "period": ""
+      }
+    },
+    "clubBase": {
+      "RUB": {
+        "amount": 2990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "2 990 \u20bd/\u043c\u0435\u0441",
+        "period": "\u043c\u0435\u0441"
+      },
+      "USD": {
+        "amount": 39,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$39/mo",
+        "period": "mo"
+      },
+      "EUR": {
+        "amount": 39,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "39 \u20ac/mes",
+        "period": "mes"
+      }
+    },
+    "clubPro": {
+      "RUB": {
+        "amount": 4990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "4 990 \u20bd/\u043c\u0435\u0441",
+        "period": "\u043c\u0435\u0441"
+      },
+      "USD": {
+        "amount": 49,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$49/mo",
+        "period": "mo"
+      },
+      "EUR": {
+        "amount": 49,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "49 \u20ac/mes",
+        "period": "mes"
+      }
+    },
+    "courseA": {
+      "RUB": {
+        "amount": 34900,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "34 900 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 390,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$390",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 359,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "359 \u20ac",
+        "period": ""
+      }
+    },
+    "courseB": {
+      "RUB": {
+        "amount": 34900,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "34 900 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 390,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$390",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 359,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "359 \u20ac",
+        "period": ""
+      }
+    },
+    "courseC": {
+      "RUB": {
+        "amount": 29900,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "29 900 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 349,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$349",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 319,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "319 \u20ac",
+        "period": ""
+      }
+    },
+    "bundleLight": {
+      "RUB": {
+        "amount": 79990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "79 990 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 990,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$990",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 890,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "890 \u20ac",
+        "period": ""
+      }
+    },
+    "bundlePro": {
+      "RUB": {
+        "amount": 119990,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "119 990 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 1490,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$1,490",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 1390,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "1 390 \u20ac",
+        "period": ""
+      }
+    },
+    "b2bSprintLaunch": {
+      "RUB": {
+        "amount": 249000,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "249 000 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 2500,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$2,500",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 2390,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "2 390 \u20ac",
+        "period": ""
+      }
+    },
+    "b2bSprintFlagship": {
+      "RUB": {
+        "amount": 449000,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "449 000 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 4500,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "$4,500",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 4290,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "4 290 \u20ac",
+        "period": ""
+      }
+    },
+    "b2bSovereign": {
+      "RUB": {
+        "amount": 500000,
+        "currency": "RUB",
+        "symbol": "\u20bd",
+        "formatted": "\u043e\u0442 500 000 \u20bd",
+        "period": ""
+      },
+      "USD": {
+        "amount": 5000,
+        "currency": "USD",
+        "symbol": "$",
+        "formatted": "from $5,000+",
+        "period": ""
+      },
+      "EUR": {
+        "amount": 4900,
+        "currency": "EUR",
+        "symbol": "\u20ac",
+        "formatted": "desde 4 900 \u20ac+",
+        "period": ""
+      }
+    }
+  },
+  "priceNames": {
+    "free": "Free Front-Door Sandbox & Open Book Part I",
+    "concentrate": "3-Evening AI Concentrate + Starter Vault",
+    "kiosk": "Kiosk",
+    "clubBase": "Solopreneur Club Base Tier",
+    "clubPro": "Solopreneur Club Pro Tier",
+    "courseA": "Vibe-Coding & AI Workshop from Scratch",
+    "courseB": "AI Solopreneur: One-Person Business & Auto-Funnels",
+    "courseC": "Content Factory 3.0, GPT Image 2.6 & AI Avatars",
+    "bundleLight": "ColibriOS Light (Core 12 Modules)",
+    "bundlePro": "ColibriOS Pro (All 18 Modules & Turnkey Repos)",
+    "b2bSprintLaunch": "B2B Rapid Agent Launch Sprint",
+    "b2bSprintFlagship": "B2B Enterprise Flagship Implementation",
+    "b2bSovereign": "Sovereign Multi-Agent Infrastructure"
+  }
+}

@@ -1,0 +1,170 @@
+:root {
+  --bg-canvas: #f6f0e2;
+  --bg-sheet: #fbf7ee;
+  --bg-well: #eae1ce;
+  --line-hairline: #ddd5c0;
+  --line-control: #8a7d6b;
+  --ink: #1e1915;
+  --ink-muted: #4a3f35;
+  --ink-tertiary: var(--ink-muted);
+  --accent: #8c2b10;
+  --accent-text: var(--accent);
+  --accent-deep: #7a240c;
+  --verified: #165337;
+  --verified-deep: #124a30;
+  --highlighter: #f8d768;
+  --on-accent: #fbf7ee;
+  --focus-ring: #8c2b10;
+  --rule-notebook: transparent;
+  --rule-margin: transparent;
+  --shadow-sheet:
+    0 1px 0 rgba(30, 25, 21, 0.06), 0 18px 48px -24px rgba(30, 25, 21, 0.28);
+  --spine-shade: rgba(30, 25, 21, 0.18);
+  --scrim: rgba(30, 25, 21, 0.42);
+  --space-0_5: 4px;
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 40px;
+  --space-6: 48px;
+  --space-8: 64px;
+  --space-10: 80px;
+  --radius-chip: 6px;
+  --radius-btn: 10px;
+  --radius-card: 12px;
+  --radius-sheet: 4px;
+  --radius-pill: 999px;
+  --topbar-h: 56px;
+  --topbar-h-compact: 52px;
+  --ribbon-h: 3px;
+  --rail-w: 300px;
+  --margin-col-w: 232px;
+  --pagebar-h: 48px;
+  --tap: 44px;
+  --z-rail: 10;
+  --z-topbar: 40;
+  --z-pagebar: 50;
+  --z-drawer: 60;
+  --z-dialog: 70;
+  --z-toast: 80;
+  --dur-fast: 120ms;
+  --dur-base: 180ms;
+  --dur-drawer: 240ms;
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --font-serif: "Literata", "Newsreader", Georgia, "Times New Roman", serif;
+  --font-sans:
+    "Manrope", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  --font-mono:
+    "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --fs-cover: clamp(2.5rem, 1.9286rem + 2.8571vw, 4.5rem);
+  --fs-part: clamp(2rem, 1.6429rem + 1.7857vw, 3.25rem);
+  --fs-h1: clamp(2rem, 1.7143rem + 1.4286vw, 3rem);
+  --fs-h2: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  --fs-h3: clamp(1.25rem, 1.1786rem + 0.3571vw, 1.5rem);
+  --fs-body: clamp(1.125rem, 1.0714rem + 0.2679vw, 1.3125rem);
+  --fs-lede: calc(var(--fs-body) * 1.167);
+  --fs-pull: clamp(1.375rem, 1.3036rem + 0.3571vw, 1.625rem);
+  --fs-callout: 1rem;
+  --fs-ui: 0.9375rem;
+  --fs-ui-sm: 0.875rem;
+  --fs-badge: 0.75rem;
+  --fs-masthead: 0.8125rem;
+  --fs-mono: 0.9375rem;
+  --fs-num-lg: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+  --reader-scale: 1;
+  --reader-lh: 1.75;
+  --measure: 62ch;
+  --pad-x: 32px;
+}
+[data-theme="sepia"] {
+  --bg-canvas: #f4ecd8;
+  --bg-sheet: #fbf4e4;
+  --bg-well: #ece2c8;
+  --line-hairline: #d8c9a8;
+  --highlighter: #f8d768;
+  --on-accent: #fbf4e4;
+  --rule-notebook: #d8c9a8;
+  --rule-margin: #e2b49a;
+  --shadow-sheet:
+    0 1px 0 rgba(30, 25, 21, 0.07), 0 16px 40px -24px rgba(30, 25, 21, 0.24);
+  --spine-shade: rgba(30, 25, 21, 0.16);
+}
+[data-theme="dark"] {
+  --bg-canvas: #09090b;
+  --bg-sheet: #131316;
+  --bg-well: #202026;
+  --line-hairline: rgba(247, 244, 238, 0.11);
+  --line-control: #6e6a64;
+  --ink: #f7f4ee;
+  --ink-muted: #ddd8cf;
+  --ink-tertiary: #bdb6aa;
+  --accent: #ff6b45;
+  --accent-text: #ff9a7e;
+  --accent-deep: #ff9a7e;
+  --verified: #74b994;
+  --verified-deep: #74b994;
+  --highlighter: #3a3218;
+  --on-accent: #09090b;
+  --focus-ring: #ff9a7e;
+  --shadow-sheet:
+    0 0 0 1px rgba(247, 244, 238, 0.06), 0 24px 64px -32px rgba(0, 0, 0, 0.7);
+  --spine-shade: rgba(0, 0, 0, 0.55);
+  --scrim: rgba(9, 9, 11, 0.72);
+  color-scheme: dark;
+}
+[data-reader-scale="-2"] {
+  --reader-scale: 0.889;
+}
+[data-reader-scale="-1"] {
+  --reader-scale: 0.944;
+}
+[data-reader-scale="1"] {
+  --reader-scale: 1.111;
+}
+[data-reader-scale="2"] {
+  --reader-scale: 1.222;
+}
+[data-reader-lh="1.6"] {
+  --reader-lh: 1.6;
+}
+[data-reader-lh="1.9"] {
+  --reader-lh: 1.9;
+}
+@media (max-width: 767px) {
+  :root {
+    --topbar-h: 52px;
+    --pad-x: 24px;
+  }
+}
+@media (max-width: 429px) {
+  :root {
+    --pad-x: 16px;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --measure: 66ch;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --measure: 68ch;
+    --pad-x: 40px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur-base: 0ms;
+    --dur-drawer: 0ms;
+  }
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}

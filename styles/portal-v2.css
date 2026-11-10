@@ -1,0 +1,522 @@
+/* Six-realm extension: DESIGN_V2_EXTENSION.md is the visual authority. */
+:root {
+  --topbar-h: 99px;
+  --bg-page: var(--bg-canvas);
+  --ink-primary: var(--ink);
+  --font-ui: var(--font-sans);
+  --font-book: Literata, serif;
+  --font-display: var(--display);
+}
+.mobile-theme-cycle,
+.portal-mobile-utils {
+  display: none;
+}
+.realm-utilities {
+  height: 40px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 24px;
+}
+.realm-utilities select {
+  max-width: 80px;
+  min-height: 32px;
+}
+#guides-q {
+  max-width: 480px;
+}
+html,
+body {
+  max-width: 100%;
+}
+[hidden] {
+  display: none !important;
+}
+.unified-topbar__main {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto auto;
+  gap: 12px;
+  min-height: 56px;
+  height: 56px;
+}
+.realm-pills {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  justify-content: flex-start;
+}
+.realm-pills > button {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding-inline: 12px;
+  white-space: nowrap;
+}
+.locale-switch {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.locale-switch button,
+.locale-btn {
+  min-width: 44px;
+  min-height: 44px;
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--line-hairline, var(--line));
+}
+.locale-switch [aria-checked="true"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+.locale-btn {
+  display: none;
+}
+.locale-popover {
+  padding: 16px;
+  background: var(--bg-page);
+  color: var(--ink-primary);
+  border: 1px solid var(--line-hairline, var(--line));
+}
+.realm-utilities {
+  min-height: 40px;
+}
+.portal-v2-shell {
+  max-width: 1320px;
+  margin-inline: auto;
+  padding: 48px 24px 80px;
+}
+.portal-v2-shell h1 {
+  font-family: var(--font-display, var(--font-book));
+  font-size: clamp(32px, 3.5vw, 44px);
+  line-height: 1.12;
+  margin-block: 12px 24px;
+  max-width: 24ch;
+  text-wrap: balance;
+}
+.portal-v2-shell h2 {
+  line-height: 1.3;
+}
+.portal-v2-shell p {
+  line-height: 1.7;
+}
+.portal-v2-shell button,
+.portal-v2-shell input,
+.portal-v2-shell select,
+.portal-v2-shell textarea {
+  font: inherit;
+  min-height: 44px;
+  max-width: 100%;
+}
+.portal-v2-shell input,
+.portal-v2-shell select,
+.portal-v2-shell textarea {
+  width: 100%;
+  color: inherit;
+  background: var(--bg-well, transparent);
+  border: 1px solid var(--line-hairline, var(--line));
+  padding: 10px 12px;
+  border-radius: 0;
+}
+.portal-v2-shell label {
+  display: block;
+  margin-block: 12px 6px;
+}
+.portal-v2-shell pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-size: 14px;
+  line-height: 1.65;
+}
+.portal-v2-shell .mono,
+.price-ledger {
+  font-variant-numeric: tabular-nums;
+}
+.ruled-card {
+  border-block-start: 1px solid var(--line-hairline, var(--line));
+  padding-block: 24px;
+  min-width: 0;
+}
+.course-grid,
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+}
+.course-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  mix-blend-mode: var(--plate-blend);
+  filter: var(--plate-filter);
+}
+.course-card h2,
+.role-card h2 {
+  font-family: var(--font-ui);
+  font-size: 20px;
+  line-height: 1.4;
+}
+.course-card a,
+.portal-v2-shell .btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 12px;
+}
+.course-lesson {
+  display: grid;
+  grid-template-columns: 280px minmax(0, 65ch) 360px;
+  gap: 32px;
+  margin-top: 40px;
+  align-items: start;
+}
+.lesson-rail {
+  position: sticky;
+  top: calc(var(--topbar-h) + 16px);
+}
+.lesson-rail ol {
+  padding-left: 20px;
+}
+.lesson-rail li {
+  margin-block: 12px;
+  line-height: 1.5;
+}
+.lesson-body {
+  min-width: 0;
+  font-family: var(--font-book, Literata, serif);
+  font-size: calc(18px + var(--reader-scale, 0) * 1px);
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+.lesson-body .lesson-section {
+  border-block-start: 1px solid var(--line-hairline, var(--line));
+  padding-block: 18px;
+}
+.lesson-body p {
+  white-space: pre-line;
+}
+.trainer {
+  min-width: 0;
+}
+.trainer-output {
+  margin-block: 16px;
+  border-block: 1px solid var(--line-hairline, var(--line));
+  padding-block: 12px;
+}
+.trainer-step[aria-current="step"] {
+  text-decoration: underline;
+}
+.trainer-actions,
+.guide-filters,
+.guide-tabs,
+.scenario-chips,
+.price-ledger {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-block: 16px;
+}
+.trainer-actions button,
+.guide-filters button,
+.guide-tabs button,
+.scenario-chips button {
+  color: inherit;
+  background: transparent;
+  border: 1px solid var(--line-hairline, var(--line));
+  padding: 8px 12px;
+}
+[aria-pressed="true"],
+.guide-tabs [aria-selected="true"] {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.guide-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 32px;
+}
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+.guide-preview {
+  position: sticky;
+  top: calc(var(--topbar-h) + 20px);
+  align-self: start;
+  max-height: calc(100dvh - var(--topbar-h) - 40px);
+  overflow: auto;
+}
+.guide-preview p {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+.access-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 4px 8px;
+  background: var(--bg-well, transparent);
+}
+.glossary {
+  columns: 2;
+  column-gap: 48px;
+}
+.glossary > div {
+  break-inside: avoid;
+  margin-block-end: 24px;
+}
+.glossary dt {
+  font-weight: 700;
+  font-family: var(--font-ui);
+}
+.glossary dd {
+  margin: 8px 0 0;
+  font-family: var(--font-book);
+  font-size: 17px;
+  line-height: 1.65;
+}
+.glossary-index {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-block: 24px;
+}
+.glossary-index a {
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.trophy-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+}
+.trophy-concept {
+  margin: 0;
+  min-width: 0;
+}
+.concept-medallion {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  border: 1px solid var(--line-hairline, var(--line));
+  background: radial-gradient(circle, var(--bg-well, transparent), transparent);
+  display: grid;
+  place-items: center;
+  margin-block: 24px;
+}
+.concept-medallion img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  mix-blend-mode: var(--plate-blend);
+  filter: var(--plate-filter);
+}
+.trophy-concept figcaption {
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.concept-note,
+.portal-notice {
+  border-block: 1px solid var(--line-hairline, var(--line));
+  padding: 16px 0;
+  line-height: 1.7;
+}
+.portal-notice {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding-inline: 24px;
+}
+.portal-v2-shell dialog {
+  max-width: min(92vw, 780px);
+  max-height: 85dvh;
+  overflow: auto;
+  background: var(--bg-page);
+  color: var(--ink-primary);
+  border: 1px solid var(--line-hairline, var(--line));
+  padding: 24px;
+}
+.portal-v2-shell dialog::backdrop {
+  background: rgb(0 0 0 / 0.6);
+}
+.portal-v2-shell :focus-visible,
+.locale-switch button:focus-visible,
+.locale-btn:focus-visible,
+.realm-pills button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+#realm-live {
+  position: fixed;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+.root-landing {
+  max-width: 900px;
+  margin: 12vh auto;
+  padding: 24px;
+}
+.root-landing h1 {
+  font-family: var(--font-display, var(--font-book));
+  font-size: clamp(34px, 5vw, 60px);
+}
+.root-choices {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.root-choices a {
+  color: inherit;
+  padding: 24px 0;
+  min-height: 44px;
+  border-block: 1px solid var(--line-hairline, var(--line));
+}
+@media (max-width: 1200px) {
+  .course-lesson {
+    grid-template-columns: 190px minmax(0, 1fr);
+  }
+  .trainer {
+    grid-column: 2;
+  }
+  .global-themes button {
+    padding-inline: 6px;
+  }
+}
+@media (max-width: 1023px) {
+  .course-lesson {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .lesson-rail {
+    display: none;
+  }
+  .trainer {
+    grid-column: 1;
+  }
+  .unified-brand span {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  :root {
+    --topbar-h: 96px;
+  }
+  .unified-topbar__main {
+    height: 96px;
+    min-height: 96px;
+    padding: 0 12px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto auto;
+    grid-template-rows: 52px 44px;
+    gap: 0 8px;
+  }
+  .unified-brand {
+    grid-column: 1;
+    grid-row: 1;
+    min-width: 0;
+  }
+  .unified-brand span {
+    display: inline;
+    font-size: 14px;
+  }
+  .realm-pills {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    width: 100%;
+    justify-content: flex-start;
+    margin: 0;
+    scroll-snap-type: x mandatory;
+  }
+  .realm-pills button {
+    min-height: 44px;
+    scroll-snap-align: center;
+  }
+  .locale-switch--desktop {
+    display: none;
+  }
+  .portal-mobile-utils {
+    display: flex;
+    grid-column: 2;
+    grid-row: 1;
+    gap: 0;
+  }
+  .portal-mobile-utils button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 4px 6px;
+    font-size: 12px;
+  }
+  .locale-btn {
+    display: block;
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .global-themes {
+    grid-column: 4;
+    grid-row: 1;
+    min-width: 44px;
+  }
+  .global-themes button {
+    display: none;
+  }
+  .global-themes .mobile-theme-cycle {
+    display: inline-flex;
+    min-width: 44px;
+    min-height: 44px;
+    align-items: center;
+    justify-content: center;
+  }
+  .realm-utilities {
+    display: none;
+  }
+  .portal-v2-shell {
+    padding: 32px 20px 60px;
+  }
+  .portal-v2-shell h1 {
+    font-size: 34px;
+    line-height: 1.18;
+  }
+  .course-grid,
+  .role-grid,
+  .guide-grid,
+  .guide-layout,
+  .root-choices {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .guide-preview {
+    position: static;
+    max-height: none;
+  }
+  .glossary {
+    columns: 1;
+  }
+  .lesson-body {
+    font-size: 17px;
+  }
+  .trophy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .portal-v2-shell dialog {
+    padding: 20px;
+  }
+}
+@media (max-width: 359px) {
+  .unified-brand span {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portal-v2-shell *,
+  .realm-pills {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
