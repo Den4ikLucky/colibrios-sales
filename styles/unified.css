@@ -238,35 +238,8 @@ textarea:focus-visible {
 #academy .chapter-body {
   grid-template-columns: minmax(0, 1fr);
 }
-#academy .chapter-overview {
-  max-inline-size: min(100%, 720px);
-  margin: 28px auto 0;
-}
-#academy .chapter {
-  max-inline-size: 860px;
-  padding: 40px 32px 80px;
-  margin-inline: auto;
-}
-#academy .chapter__head {
-  max-inline-size: 720px;
-  margin: 0 auto 36px;
-}
-#academy .chapter-body {
-  display: grid;
-  grid-template-columns: minmax(0, 720px);
-  justify-content: center;
-  gap: 22px;
-}
 #academy .chapter-body > * {
   grid-column: 1;
-  max-inline-size: 100%;
-  inline-size: 100%;
-  margin-inline: 0;
-}
-#academy .chapter-body > .chapter__part-plate {
-  max-inline-size: 100%;
-  max-block-size: none;
-  overflow: visible;
 }
 #academy .chapter-body > .callout {
   padding: 24px;

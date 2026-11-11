@@ -127,8 +127,9 @@
           "'": "&#39;",
         })[c] || c,
     );
-  /** @param {string} text @param {HTMLElement} [button] */
+  /** @param {string} text @param {HTMLElement} [button] @returns {Promise<boolean>} */
   async function copyText(text, button) {
+    let ok = true;
     try {
       await navigator.clipboard.writeText(text);
       announce(ui.copied);
@@ -137,11 +138,12 @@
       field.value = text;
       document.body.append(field);
       field.select();
-      const ok = document.execCommand("copy");
+      ok = document.execCommand("copy");
       field.remove();
       announce(ok ? ui.copied : ui.copyFailed);
     }
     button?.focus();
+    return ok;
   }
   /** @param {HTMLDialogElement|null} dialog @param {HTMLElement} [opener] */
   function openDialog(dialog, opener) {
@@ -413,6 +415,7 @@
       );
     }
     let activeCategory = "all";
+    let activeTool = "all";
     let timer = 0;
     const queryInput = $("#guides-q");
     const search = () => {
@@ -432,8 +435,13 @@
         ]
           .join(" ")
           .toLocaleLowerCase(data.locale);
+        const tools = (card.dataset.ai || "").split(" ");
+        const toolOk =
+          activeTool === "all" ||
+          (activeTool === "free" ? card.dataset.tier === "free" : tools.includes(activeTool));
         card.hidden =
-          !(activeCategory === "all" || guide.category === activeCategory) ||
+          !(activeCategory === "all" || card.dataset.guideGroup === activeCategory) ||
+          !toolOk ||
           !haystack.includes(query);
         if (!card.hidden) visible++;
       });
@@ -455,13 +463,29 @@
         search();
       }),
     );
+    $$("[data-ai-filter]").forEach((button) =>
+      button.addEventListener("click", () => {
+        activeTool = button.dataset.aiFilter;
+        $$("[data-ai-filter]").forEach((node) =>
+          node.setAttribute("aria-pressed", String(node === button)),
+        );
+        search();
+      }),
+    );
     $("[data-clear-guides]").addEventListener("click", () => {
       queryInput.value = "";
       activeCategory = "all";
+      activeTool = "all";
       $$("[data-guide-filter]").forEach((node) =>
         node.setAttribute(
           "aria-pressed",
           String(node.dataset.guideFilter === "all"),
+        ),
+      );
+      $$("[data-ai-filter]").forEach((node) =>
+        node.setAttribute(
+          "aria-pressed",
+          String(node.dataset.aiFilter === "all"),
         ),
       );
       search();
@@ -530,17 +554,38 @@
           /** @param {any} item */ (item) =>
             item.slug === button.dataset.openGuide,
         );
-        if (innerWidth < 768) {
-          renderGuide(guide, $("[data-guide-dialog-body]"));
-          openDialog($("#guide-dialog"), button);
-        } else {
-          renderGuide(guide, $("#guide-preview"));
-          $("#guide-preview").focus();
-        }
+        renderGuide(guide, $("[data-guide-dialog-body]"));
+        openDialog($("#guide-dialog"), button);
       }),
     );
     if (data.guides[0]) renderGuide(data.guides[0], $("#guide-preview"));
     search();
+    // Hub jump links: switch realm via the real tab button, then scroll.
+    $$("[data-mh-jump]").forEach((link) =>
+      link.addEventListener("click", (event) => {
+        const tab = document.getElementById("realm-tab-" + link.dataset.mhJump);
+        if (!tab) return;
+        event.preventDefault();
+        tab.click();
+        const target = document.querySelector(
+          link.dataset.mhScroll || "#" + link.dataset.mhJump,
+        );
+        if (target) target.scrollIntoView({ block: "start" });
+      }),
+    );
+    // 1-click copy for any valued [data-copy-guide] (hero demo + 24 catalog cards).
+    const guideBySlug = /** @type {Record<string, any>} */ ({});
+    data.guides.forEach(
+      /** @param {any} guide */ (guide) => {
+        guideBySlug[guide.slug] = guide;
+      },
+    );
+    $$("[data-copy-guide]:not([data-copy-guide=''])").forEach((button) =>
+      button.addEventListener("click", () => {
+        const guide = guideBySlug[button.dataset.copyGuide];
+        if (guide) copyText(guide.prompt1, button);
+      }),
+    );
     $$("[data-consultant]").forEach((host) => {
       const role = data.consultants.find(
         /** @param {any} item */ (item) => item.id === host.dataset.consultant,
