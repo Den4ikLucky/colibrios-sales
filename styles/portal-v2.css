@@ -187,7 +187,7 @@ body {
 .lesson-body {
   min-width: 0;
   font-family: var(--font-book, Literata, serif);
-  font-size: calc(18px + var(--reader-scale, 0) * 1px);
+  font-size: calc(18px * var(--reader-scale, 1));
   line-height: 1.8;
   overflow-wrap: anywhere;
 }

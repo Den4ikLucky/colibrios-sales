@@ -196,7 +196,7 @@
     syncPanels();
     const syncScale = () =>
       document.documentElement.style.setProperty(
-        "--reader-scale",
+        "--lesson-scale",
         document.documentElement.dataset.readerScale || "0",
       );
     new MutationObserver(syncScale).observe(document.documentElement, {
