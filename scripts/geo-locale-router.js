@@ -38,7 +38,8 @@
   'use strict';
 
   var LOCALES = Object.freeze(['ru', 'en', 'es']);
-  var SLUGS = Object.freeze({ ru: 'colibri-os-ru', en: 'denysviet-os-en', es: 'colibri-os-es' });
+  var SLUGS = Object.freeze({ ru: 'ru', en: '', es: 'es' });
+  var LEGACY_SLUGS = Object.freeze({ 'colibri-os-ru': 'ru', 'denysviet-os-en': 'en', 'colibri-os-es': 'es', 'ru': 'ru', 'en': 'en', 'es': 'es' });
   var SYMBOLS = Object.freeze({ RUB: '\u20BD', USD: '$', EUR: '\u20AC' });
   var ALLOWED_CURRENCIES = Object.freeze({
     ru: Object.freeze(['RUB']),
@@ -203,9 +204,7 @@
   function localeFromPath(pathname) {
     if (typeof pathname !== 'string') return null;
     var first = pathname.split('/').filter(Boolean)[0] || '';
-    for (var i = 0; i < LOCALES.length; i++) {
-      if (SLUGS[LOCALES[i]] === first) return LOCALES[i];
-    }
+    if (has(LEGACY_SLUGS, first)) return LEGACY_SLUGS[first];
     return null;
   }
 
@@ -222,7 +221,8 @@
     var base;
     try { base = new URL(typeof currentHref === 'string' ? currentHref : '/', 'http://localhost'); }
     catch (e) { base = new URL('http://localhost/'); }
-    var target = new URL('/' + SLUGS[l] + '/', base.origin);
+    var slug = SLUGS[l];
+    var target = new URL(slug ? '/' + slug + '/' : '/', base.origin);
     base.searchParams.forEach(function (value, key) {
       if (ROUTER_PARAMS.indexOf(key) === -1) target.searchParams.append(key, value);
     });

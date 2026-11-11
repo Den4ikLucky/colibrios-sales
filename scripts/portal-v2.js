@@ -241,7 +241,9 @@
           state.ColibriGeoRouter.switchLocale(locale, nextCurrency);
         else
           location.assign(
-            `../${data.localePaths[locale]}/index.html?currency=${nextCurrency}${location.hash}`,
+            locale === "en"
+              ? `/?currency=${nextCurrency}${location.hash}`
+              : `/${locale}/?currency=${nextCurrency}${location.hash}`,
           );
       });
     });
